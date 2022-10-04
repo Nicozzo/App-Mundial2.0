@@ -14,6 +14,10 @@
     <Compile Remove="Migrations\20221002224307_InitDB.Designer.cs" />
     <Compile Remove="Migrations\20221002225524_1.cs" />
     <Compile Remove="Migrations\20221002225524_1.Designer.cs" />
+    <Compile Remove="Migrations\20221004002504_s.cs" />
+    <Compile Remove="Migrations\20221004002504_s.Designer.cs" />
+    <Compile Remove="Migrations\20221004002854_s.cs" />
+    <Compile Remove="Migrations\20221004002854_s.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

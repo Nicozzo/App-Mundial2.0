@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mzCZqwoVjJdN2z0MGu0t68hcpKhJgucwl1JSGRBXrr1odpseEQm9xKOHgq2mcQzOB7LL/UFNYRwDGoRG1ontwQ==",
+  "dgSpecHash": "uuJw6W/JjZDKY/Vjo6rE2NoV5hENv/UcuGyyxDMnVEoQiGxG384bfdFdBgNDLr3cQZbHufuzWBS86B4K0VYnKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApiApplication4\\WebApiApplication4.csproj",
+  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApiApplication4\\WebApiApplication4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
   ],

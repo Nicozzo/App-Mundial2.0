@@ -37,3 +37,16 @@ C:\Users\diego\Desktop\ObliP3\ObliP3\LogicaAplicacion\obj\Debug\netcoreapp3.1\Lo
 C:\Users\diego\Desktop\ObliP3\ObliP3\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.csproj.CopyComplete
 C:\Users\diego\Desktop\ObliP3\ObliP3\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.dll
 C:\Users\diego\Desktop\ObliP3\ObliP3\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.pdb
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\bin\Debug\netcoreapp3.1\LogicaAplicacion.deps.json
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\bin\Debug\netcoreapp3.1\LogicaAplicacion.dll
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\bin\Debug\netcoreapp3.1\LogicaAplicacion.pdb
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\bin\Debug\netcoreapp3.1\LogicaNegocio.dll
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\bin\Debug\netcoreapp3.1\LogicaNegocio.pdb
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.csproj.AssemblyReference.cache
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.AssemblyInfoInputs.cache
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.AssemblyInfo.cs
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.csproj.CopyComplete
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.dll
+C:\Users\diego\source\repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.pdb
