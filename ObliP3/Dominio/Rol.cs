@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LogicaNegocio.Dominio
 {
-    public class Fase
+    [Table("Rol")]
+    public class Rol
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         private int id;
+
+        private string nombre;
+
     }
 }

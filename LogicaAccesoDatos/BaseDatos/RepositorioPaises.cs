@@ -42,7 +42,7 @@ namespace LogicaAccesoDatos.BaseDatos
         public IEnumerable<Pais> FindAll()
         {
             return Contexto.Paises
-                   .Include(pa => pa.Region)
+                   .Include(pa => pa.IdRegion)
                    //.Include(au => au.PublicacionesAutor)
                    //.ThenInclude(pa => pa.Publicacion)
                    .ToList();

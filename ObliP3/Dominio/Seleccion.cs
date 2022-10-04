@@ -10,16 +10,19 @@ namespace LogicaNegocio.Dominio
     [Table("Seleccion")]
     public class Seleccion
     {
+
         public int ID { get; set; }
 
+        [Required]
         public string Nombre { get; set; }
-
+        [Required]
         public string Email { get; set; }
 
         public int Telefono { get; set; }
 
         public int CantApost { get; set; }
 
+        [Required]
         public Pais pais { get; set; }
     }
 }

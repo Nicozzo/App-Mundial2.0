@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace LogicaNegocio.Dominio
 {
-    class Eliminatoria
+    public class Eliminatoria
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        private int id;
     }
 }
