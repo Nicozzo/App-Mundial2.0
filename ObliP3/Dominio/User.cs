@@ -11,6 +11,7 @@ namespace LogicaNegocio.Dominio
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         private int id;
 
         private Rol rol;
@@ -20,7 +21,6 @@ namespace LogicaNegocio.Dominio
 
         [Required]
         private string password;
-
 
     }
 }

@@ -48,3 +48,6 @@ C:\Users\agust\Source\Repos\App-Mundial2.0\ObliP3\obj\Debug\netcoreapp3.1\Logica
 C:\Users\agust\Source\Repos\App-Mundial2.0\ObliP3\obj\Debug\netcoreapp3.1\LogicaNegocio.csproj.CoreCompileInputs.cache
 C:\Users\agust\Source\Repos\App-Mundial2.0\ObliP3\obj\Debug\netcoreapp3.1\LogicaNegocio.dll
 C:\Users\agust\Source\Repos\App-Mundial2.0\ObliP3\obj\Debug\netcoreapp3.1\LogicaNegocio.pdb
+C:\Users\agust\Source\Repos\App-Mundial2.0\ObliP3\bin\Debug\netcoreapp3.1\Excepciones.dll
+C:\Users\agust\Source\Repos\App-Mundial2.0\ObliP3\bin\Debug\netcoreapp3.1\Excepciones.pdb
+C:\Users\agust\Source\Repos\App-Mundial2.0\ObliP3\obj\Debug\netcoreapp3.1\LogicaNegocio.csproj.CopyComplete

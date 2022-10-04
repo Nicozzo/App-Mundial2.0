@@ -1509,6 +1509,9 @@
       "LogicaNegocio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Excepciones": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/LogicaNegocio.dll": {}
         },

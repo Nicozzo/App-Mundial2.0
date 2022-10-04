@@ -38,7 +38,8 @@ namespace LogicaAccesoDatos.Migrations
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(3)")
+                        .HasMaxLength(3);
 
                     b.Property<int>("Pbi")
                         .HasColumnType("int");
@@ -48,38 +49,32 @@ namespace LogicaAccesoDatos.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CodigoIso")
+                        .IsUnique();
+
+                    b.HasIndex("IdRegion");
+
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
                     b.ToTable("Pais");
-                });
-
-            modelBuilder.Entity("LogicaNegocio.Dominio.Partido", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Partido");
                 });
 
             modelBuilder.Entity("LogicaNegocio.Dominio.Region", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("IdRegion")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CodigoIso")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("NombreCont")
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("IdRegion");
 
-                    b.HasKey("ID");
+                    b.HasIndex("Nombre")
+                        .IsUnique();
 
                     b.ToTable("Region");
                 });
@@ -113,6 +108,15 @@ namespace LogicaAccesoDatos.Migrations
                     b.HasIndex("paisId");
 
                     b.ToTable("Seleccion");
+                });
+
+            modelBuilder.Entity("LogicaNegocio.Dominio.Pais", b =>
+                {
+                    b.HasOne("LogicaNegocio.Dominio.Region", "Region")
+                        .WithMany("Paises")
+                        .HasForeignKey("IdRegion")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("LogicaNegocio.Dominio.Seleccion", b =>

@@ -10,6 +10,7 @@ namespace LogicaNegocio.Dominio
     public class Rol
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         private int id;
 
         private string nombre;

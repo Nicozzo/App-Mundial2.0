@@ -10,7 +10,7 @@ namespace LogicaNegocio.Dominio
     [Table("Seleccion")]
     public class Seleccion
     {
-
+        [Key]
         public int ID { get; set; }
 
         [Required]

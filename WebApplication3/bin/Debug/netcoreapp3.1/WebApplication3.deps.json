@@ -2238,6 +2238,9 @@
         }
       },
       "LogicaNegocio/1.0.0": {
+        "dependencies": {
+          "Excepciones": "1.0.0"
+        },
         "runtime": {
           "LogicaNegocio.dll": {}
         },

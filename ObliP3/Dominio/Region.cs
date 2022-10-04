@@ -1,18 +1,36 @@
-﻿using System;
+﻿using Excepciones;
+using LogicaNegocio.InterfacesDominio;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace LogicaNegocio.Dominio
 {
-    public class Region
+    public class Region  : IValidable
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get;   set; }
-        public string NombreCont { get; set; }
+        [Key]
+        public int IdRegion { get;   set; }
 
-        public string CodigoIso { get; set; }
-
+        
+        [Required]
         public string Nombre { get; set; }
+
+        public List<Pais> Paises { get; set; }
+
+        public void Validar()
+        {
+            NombreValido();
+        }
+
+        private void NombreValido()
+        {
+            Nombre = Nombre.ToLower();
+            if (Nombre != "africa" || Nombre != "américa" || Nombre != "asia" || Nombre != "europa" || Nombre != "oceanía") {
+                throw new RegionException("La región debe existir (continente");
+            }
+        }
     }
 }

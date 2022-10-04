@@ -14,7 +14,15 @@
           "LogicaAplicacion.dll": {}
         }
       },
+      "Excepciones/1.0.0": {
+        "runtime": {
+          "Excepciones.dll": {}
+        }
+      },
       "LogicaNegocio/1.0.0": {
+        "dependencies": {
+          "Excepciones": "1.0.0"
+        },
         "runtime": {
           "LogicaNegocio.dll": {}
         }
@@ -23,6 +31,11 @@
   },
   "libraries": {
     "LogicaAplicacion/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Excepciones/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

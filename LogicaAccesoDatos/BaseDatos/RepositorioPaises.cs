@@ -25,7 +25,7 @@ namespace LogicaAccesoDatos.BaseDatos
         {
             try
             {
-               
+                obj.Validar();
                 Contexto.Paises.Add(obj);
                 Contexto.SaveChanges();
             }
@@ -42,9 +42,7 @@ namespace LogicaAccesoDatos.BaseDatos
         public IEnumerable<Pais> FindAll()
         {
             return Contexto.Paises
-                   .Include(pa => pa.IdRegion)
-                   //.Include(au => au.PublicacionesAutor)
-                   //.ThenInclude(pa => pa.Publicacion)
+                   .Include(pa => pa.Region)
                    .ToList();
         }
 
@@ -67,6 +65,7 @@ namespace LogicaAccesoDatos.BaseDatos
 
         public void Update(Pais obj)
         {
+            obj.Validar();
             Contexto.Paises.Update(obj);
             Contexto.SaveChanges();
         }

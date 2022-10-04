@@ -166,7 +166,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\agust\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+                "projectPath": "C:\\Users\\agust\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
