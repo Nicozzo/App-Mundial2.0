@@ -12,6 +12,9 @@ namespace LogicaAccesoDatos.BaseDatos
        // public DbSet<Fase> Fases { get; set; }
         public DbSet<Region> Region { get; set; }
 
+        public DbSet<Partido> Partido { get; set; }
+
+        public DbSet<Seleccion> Seleccion { get; set; }
 
 
         public LibreriaContext(DbContextOptions<LibreriaContext> opciones) : base(opciones)
