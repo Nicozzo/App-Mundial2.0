@@ -51,6 +51,18 @@ namespace LogicaAccesoDatos.Migrations
                     b.ToTable("Pais");
                 });
 
+            modelBuilder.Entity("LogicaNegocio.Dominio.Partido", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Partido");
+                });
+
             modelBuilder.Entity("LogicaNegocio.Dominio.Region", b =>
                 {
                     b.Property<int>("ID")
@@ -72,11 +84,47 @@ namespace LogicaAccesoDatos.Migrations
                     b.ToTable("Region");
                 });
 
+            modelBuilder.Entity("LogicaNegocio.Dominio.Seleccion", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CantApost")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Telefono")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("paisId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("paisId");
+
+                    b.ToTable("Seleccion");
+                });
+
             modelBuilder.Entity("LogicaNegocio.Dominio.Pais", b =>
                 {
                     b.HasOne("LogicaNegocio.Dominio.Region", "Region")
                         .WithMany()
                         .HasForeignKey("RegionID");
+                });
+
+            modelBuilder.Entity("LogicaNegocio.Dominio.Seleccion", b =>
+                {
+                    b.HasOne("LogicaNegocio.Dominio.Pais", "pais")
+                        .WithMany()
+                        .HasForeignKey("paisId");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {}
+    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\Excepciones.csproj": {
+    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\Excepciones.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
         "projectName": "Excepciones",
-        "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\Excepciones.csproj",
-        "packagesPath": "C:\\Users\\Nicolas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\obj\\",
+        "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nicolas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,21 +54,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
+    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
         "projectName": "LogicaAccesoDatos",
-        "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
-        "packagesPath": "C:\\Users\\Nicolas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\LogicaAccesoDatos\\obj\\",
+        "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nicolas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,11 +82,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\Excepciones.csproj": {
-                "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\Excepciones.csproj"
+              "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+                "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
               },
-              "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\ObliP3\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\ObliP3\\LogicaNegocio.csproj"
+              "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
               }
             }
           }
@@ -127,21 +127,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\ObliP3\\LogicaNegocio.csproj": {
+    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\ObliP3\\LogicaNegocio.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
         "projectName": "LogicaNegocio",
-        "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\ObliP3\\LogicaNegocio.csproj",
-        "packagesPath": "C:\\Users\\Nicolas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\ObliP3\\obj\\",
+        "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nicolas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -181,7 +181,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

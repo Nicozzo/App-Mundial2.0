@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Nicolas\\.nuget\\packages\\": {}
+    "C:\\Users\\diego\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\Excepciones.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
       "projectName": "Excepciones",
-      "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\Excepciones.csproj",
-      "packagesPath": "C:\\Users\\Nicolas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\obj\\",
+      "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nicolas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yOkcFzSWxrxkhC/jPQnXUBwvvhQDpAW0SRA1y/HvRjZjN0iUCVHuQXuqE2y95auBu2vBxPzDRXwR+p/IqpB8wg==",
+  "dgSpecHash": "uuJw6W/JjZDKY/Vjo6rE2NoV5hENv/UcuGyyxDMnVEoQiGxG384bfdFdBgNDLr3cQZbHufuzWBS86B4K0VYnKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\WebApiApplication4\\WebApiApplication4.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApiApplication4\\WebApiApplication4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\diego\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace LogicaNegocio.Dominio
 {
-    class Partido
+    public class Partido
     {
+        public int ID { get; set; }
     }
 }
