@@ -1,0 +1,6 @@
+C:\Users\diego\Desktop\ObliP3\ObliP3\WebApiApplication4\obj\Debug\netcoreapp3.1\WebApiApplication4.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\ObliP3\ObliP3\WebApiApplication4\obj\Debug\netcoreapp3.1\WebApiApplication4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\Desktop\ObliP3\ObliP3\WebApiApplication4\obj\Debug\netcoreapp3.1\WebApiApplication4.AssemblyInfoInputs.cache
+C:\Users\diego\Desktop\ObliP3\ObliP3\WebApiApplication4\obj\Debug\netcoreapp3.1\WebApiApplication4.AssemblyInfo.cs
+C:\Users\diego\Desktop\ObliP3\ObliP3\WebApiApplication4\obj\Debug\netcoreapp3.1\WebApiApplication4.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\ObliP3\ObliP3\WebApiApplication4\obj\Debug\netcoreapp3.1\WebApiApplication4.MvcApplicationPartsAssemblyInfo.cache

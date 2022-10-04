@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WhDnIWW6ZBnP0+41+Oq26eJwrjT1/Yjk+focbqWwN3mvghrou0kyM/F1c+owgbzV+7njhHgSHBev3VjbLzHCjg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\diego\\source\\repos\\ObliP3\\WebApplication1\\WebApplication1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\diego\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
+  "logs": []
+}

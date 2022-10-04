@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BaseDatos\Class1.cs" />
+    <Compile Remove="Migrations\20220929173722_CreacionInicial.cs" />
+    <Compile Remove="Migrations\20220929173722_CreacionInicial.Designer.cs" />
+    <Compile Remove="Migrations\20220929173945_CreacionInicial.cs" />
+    <Compile Remove="Migrations\20220929173945_CreacionInicial.Designer.cs" />
+    <Compile Remove="Migrations\20221002224307_InitDB.cs" />
+    <Compile Remove="Migrations\20221002224307_InitDB.Designer.cs" />
+    <Compile Remove="Migrations\20221002225524_1.cs" />
+    <Compile Remove="Migrations\20221002225524_1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
+    <ProjectReference Include="..\ObliP3\LogicaNegocio.csproj" />
+  </ItemGroup>
+
+</Project>
