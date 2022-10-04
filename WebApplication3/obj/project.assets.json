@@ -8511,19 +8511,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nicolas\\.nuget\\packages\\": {}
+    "C:\\Users\\diego\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\WebApplication3\\WebApplication3.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApplication3\\WebApplication3.csproj",
       "projectName": "WebApplication3",
-      "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\WebApplication3\\WebApplication3.csproj",
-      "packagesPath": "C:\\Users\\Nicolas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\WebApplication3\\obj\\",
+      "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApplication3\\WebApplication3.csproj",
+      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApplication3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nicolas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8537,17 +8537,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\Excepciones.csproj": {
-              "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\Excepciones\\Excepciones.csproj"
+            "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+              "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
             },
-            "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
-              "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj"
+            "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
+              "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj"
             },
-            "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\LogicaAplicacion\\LogicaAplicacion.csproj": {
-              "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\LogicaAplicacion\\LogicaAplicacion.csproj"
+            "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj": {
+              "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj"
             },
-            "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\ObliP3\\LogicaNegocio.csproj": {
-              "projectPath": "C:\\Users\\Nicolas\\Downloads\\ObliP3 (1)\\ObliP3\\ObliP3\\LogicaNegocio.csproj"
+            "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+              "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
             }
           }
         }
@@ -8591,6 +8591,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.25, 3.1.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8599,7 +8605,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }
