@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\LogicaAccesoDatos",
-    "\\LogicaAccesoDatos\\BaseDatos"
+    "\\LogicaAccesoDatos\\BaseDatos",
+    "\\LogicaAccesoDatos\\Migrations"
   ],
-  "SelectedNode": "\\LogicaAccesoDatos\\BaseDatos\\RepositorioSeleccion.cs",
+  "SelectedNode": "\\LogicaAccesoDatos\\Migrations\\20221004215621_aokdjoiqwj.cs",
   "PreviewInSolutionExplorer": false
 }
