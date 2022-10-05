@@ -32,6 +32,8 @@ namespace WebApplication3
             services.AddControllersWithViews();
             services.AddMvc();
 
+            services.AddSession();
+
             services.AddScoped<IAltaPais, AltaPais>();
             services.AddScoped<IBuscarID, BuscarID>();
             services.AddScoped<IListadoRegion, ListadoRegiones>();
@@ -41,8 +43,6 @@ namespace WebApplication3
 
             services.AddScoped<IListadoPais, ListadoPais>();
             services.AddScoped<IActualizarPais, ActualizarPais>();
-
-
 
             string strCon = Configuration.GetConnectionString("MiConexion");
             services.AddDbContextPool<LibreriaContext>(options => options.UseSqlServer(strCon));

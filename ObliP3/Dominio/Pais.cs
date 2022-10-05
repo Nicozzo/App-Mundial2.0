@@ -22,6 +22,7 @@ namespace LogicaNegocio.Dominio
         [MaxLength(3), Required(ErrorMessage = "El nombre es obligatorio")]
         public string CodigoIso { get; set; }
 
+        
         public int Pbi { get; set; }
 
         public int Poblacion { get; set; }
@@ -31,8 +32,6 @@ namespace LogicaNegocio.Dominio
         [ForeignKey("IdRegion")]
         public Region Region { get; set; }
         public int IdRegion { get; set; }
-
-
 
 
         public int CompareTo([AllowNull] Pais other)
@@ -58,7 +57,7 @@ namespace LogicaNegocio.Dominio
             this.Nombre.Trim();
             if (!Nombre.Any(ch => Char.IsLetterOrDigit(ch))) { 
                 throw new PaisException("El nombre solo puede contener letras y espacios embebidos");
-            };
+            }
         }
 
         public void CodigoValido()
