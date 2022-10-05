@@ -1,10 +1,12 @@
-﻿using System;
+﻿using LogicaNegocio.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace LogicaNegocio.InterfacesRepositorios
 {
-    interface IRepositorioRegion
+    public interface IRepositorioRegion : IRepositorio<Region>
     {
+
     }
 }

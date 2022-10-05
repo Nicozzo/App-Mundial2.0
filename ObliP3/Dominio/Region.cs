@@ -28,7 +28,7 @@ namespace LogicaNegocio.Dominio
         private void NombreValido()
         {
             Nombre = Nombre.ToLower();
-            if (Nombre != "africa" || Nombre != "américa" || Nombre != "asia" || Nombre != "europa" || Nombre != "oceanía") {
+            if (Nombre != "áfrica" || Nombre != "américa" || Nombre != "asia" || Nombre != "europa" || Nombre != "oceanía") {
                 throw new RegionException("La región debe existir (continente");
             }
         }

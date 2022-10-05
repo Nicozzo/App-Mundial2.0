@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LogicaAccesoDatos.BaseDatos
 {
-    class RepositirioFase
+    public class RepositorioFase
     {
     }
 }

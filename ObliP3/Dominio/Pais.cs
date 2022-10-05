@@ -15,8 +15,7 @@ namespace LogicaNegocio.Dominio
         [Key]
         public int Id { get; set; }
 
-        [MinLength(3, ErrorMessage = "El nombre debe tener 3 caracteres")]
-        [MaxLength(3, ErrorMessage = "El nombre debe tener 3 caracteres")]
+        [MinLength(3, ErrorMessage = "El nombre debe tener al menos 3 caracteres")]
         [Required(ErrorMessage = "El nombre es obligatorio")]
         public string Nombre { get; set; }
         [MinLength(3, ErrorMessage = "El nombre debe tener al menos 3 caracteres")]
@@ -32,6 +31,7 @@ namespace LogicaNegocio.Dominio
         [ForeignKey("IdRegion")]
         public Region Region { get; set; }
         public int IdRegion { get; set; }
+
 
 
 
@@ -55,21 +55,18 @@ namespace LogicaNegocio.Dominio
         }
         public void NombreValido() {
 
-            Nombre.Trim();
-            if (Nombre.Any(ch => Char.IsLetterOrDigit(ch))) { 
+            this.Nombre.Trim();
+            if (!Nombre.Any(ch => Char.IsLetterOrDigit(ch))) { 
                 throw new PaisException("El nombre solo puede contener letras y espacios embebidos");
-
             };
         }
 
         public void CodigoValido()
         {
 
-            CodigoIso.Trim();
-
+            this.CodigoIso.Trim();
             if (!CodigoIso.StartsWith(Nombre.Substring(0, 1))) { 
                 throw new PaisException("El codigo debe comenzar con la primer letra del nombre del pais");
-
             }
         }
 

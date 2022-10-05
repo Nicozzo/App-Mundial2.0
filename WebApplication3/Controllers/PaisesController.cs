@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using LogicaNegocio.Dominio;
 using LogicaAplicacion.InterfacesCU;
 using Excepciones;
+using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
@@ -15,6 +16,7 @@ namespace WebApplication3.Controllers
 
         public IAltaPais CUAltaPais { get; set; }
         public IListadoPais CUListaPais { get; set; }
+        public IListadoRegion CUListaRegion { get; set; }
 
         public IBuscarID CUBuscarxID { get; set; }
         public IActualizarPais CUActualizarPais { get; set; }
@@ -22,12 +24,14 @@ namespace WebApplication3.Controllers
 
 
 
-        public PaisesController(IAltaPais cuAlta,   IListadoPais cuLista, IBuscarID cuBuscar, IActualizarPais cuActualizarPais)
+
+        public PaisesController(IAltaPais cuAlta,   IListadoPais cuLista, IBuscarID cuBuscar, IActualizarPais cuActualizarPais, IListadoRegion cuListadoRegion)
         {
             CUBuscarxID = cuBuscar;
             CUAltaPais = cuAlta;
             CUListaPais = cuLista;
             CUActualizarPais = cuActualizarPais;
+            CUListaRegion = cuListadoRegion;
         }
 
         public ActionResult Index()
@@ -43,20 +47,25 @@ namespace WebApplication3.Controllers
         }
 
         // GET: PaisesController/Create
+        [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            RegionModel rm = new RegionModel();
+            rm.Regiones = CUListaRegion.ObtenerListado();
+            return View(rm);
         }
 
         // POST: PaisesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Pais nuevo)
+        public ActionResult Create(RegionModel nuevo)
         {
             try
             {
-                CUAltaPais.Alta(nuevo);
-                return RedirectToAction(nameof(Index));
+                Pais pais = nuevo.Pais;
+                pais.IdRegion = nuevo.IdRegionSeleccionada;
+                CUAltaPais.Alta(pais);
+                return RedirectToAction("Index", "Paises");
             }
             catch (PaisException e)
             {
@@ -80,7 +89,7 @@ namespace WebApplication3.Controllers
             {
                 if (aEditar == null)
                 {
-                    ViewBag.Error = "El Autor no existe";
+                    ViewBag.Error = "El Pais no existe";
                     return View();
                 }
 

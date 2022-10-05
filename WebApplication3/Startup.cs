@@ -34,9 +34,10 @@ namespace WebApplication3
 
             services.AddScoped<IAltaPais, AltaPais>();
             services.AddScoped<IBuscarID, BuscarID>();
-
+            services.AddScoped<IListadoRegion, ListadoRegiones>();
 
             services.AddScoped<IRepositorioPaises, RepositorioPaises>();
+            services.AddScoped<IRepositorioRegion, RepositorioRegion>();
 
             services.AddScoped<IListadoPais, ListadoPais>();
             services.AddScoped<IActualizarPais, ActualizarPais>();

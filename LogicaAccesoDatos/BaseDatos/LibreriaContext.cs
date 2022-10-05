@@ -14,7 +14,7 @@ namespace LogicaAccesoDatos.BaseDatos
        // public DbSet<Fase> Fases { get; set; }
 //        public DbSet<Grupo> Grupos { get; set; }
 
-       // public DbSet<Region> Regiones { get; set; }
+       public DbSet<Region> Regiones { get; set; }
        // public DbSet<Rol> Roles { get; set; }
       //  public DbSet<User> Users { get; set; }
 
@@ -29,7 +29,7 @@ namespace LogicaAccesoDatos.BaseDatos
           //  DbSet<Eliminatoria> Eliminatorias;
           //  DbSet<Fase> Fases;
           //  DbSet<Grupo> Grupos;
-          //  DbSet<Region> Regiones;
+           DbSet<Region> Regiones;
             //DbSet<Rol> Roles;
            // DbSet<User> Users;
            // DbSet<Partido> Partidos;
