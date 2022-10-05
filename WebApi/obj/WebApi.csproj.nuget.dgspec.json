@@ -1,0 +1,266 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApi\\WebApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+        "projectName": "Excepciones",
+        "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
+        "projectName": "LogicaAccesoDatos",
+        "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+                "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
+              },
+              "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.28, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.28, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+        "projectName": "LogicaNegocio",
+        "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+                "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApi\\WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApi\\WebApi.csproj",
+        "projectName": "WebApi",
+        "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+                "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
+              },
+              "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
+                "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj"
+              },
+              "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.25, 3.1.25]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
