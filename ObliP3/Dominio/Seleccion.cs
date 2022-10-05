@@ -22,7 +22,7 @@ namespace LogicaNegocio.Dominio
 
         public int CantApost { get; set; }
 
-        [Required]
+        
         public Pais pais { get; set; }
     }
 }

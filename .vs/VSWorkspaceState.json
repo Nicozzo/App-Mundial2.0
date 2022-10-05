@@ -3,8 +3,10 @@
     "",
     "\\LogicaAccesoDatos",
     "\\LogicaAccesoDatos\\BaseDatos",
-    "\\LogicaAccesoDatos\\Migrations"
+    "\\LogicaAccesoDatos\\Migrations",
+    "\\WebApplication3",
+    "\\WebApplication3\\Controllers"
   ],
-  "SelectedNode": "\\LogicaAccesoDatos\\Migrations\\20221004215621_aokdjoiqwj.cs",
+  "SelectedNode": "\\WebApplication3\\Controllers\\UserController.cs",
   "PreviewInSolutionExplorer": false
 }

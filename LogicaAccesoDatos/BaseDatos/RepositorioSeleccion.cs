@@ -34,18 +34,20 @@ namespace LogicaAccesoDatos.BaseDatos
             }
             catch (Exception e)
             {
-                throw new Exception("No se pudo realizar el alta de autor", e);
+                throw new Exception("No se pudo realizar el alta de seleccion", e);
             }
         }
 
         public IEnumerable<Seleccion> FindAll()
         {
-            throw new NotImplementedException();
+            return Contexto.Seleccion
+                   .Include(se => se.pais)
+                   .ToList();
         }
 
         public Seleccion FindById(int id)
         {
-            throw new NotImplementedException();
+            return Contexto.Seleccion.Where(se => se.ID == id).SingleOrDefault();
         }
 
         public IEnumerable<Seleccion> ObtainPais()
@@ -55,12 +57,17 @@ namespace LogicaAccesoDatos.BaseDatos
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+
+            Seleccion aBorrar = Contexto.Seleccion.Find(id);
+            if (aBorrar == null) throw new Exception("No existe dicho pais a borrar");
+            Contexto.Seleccion.Remove(aBorrar);
+            Contexto.SaveChanges();
         }
 
         public void Update(Seleccion obj)
         {
-            throw new NotImplementedException();
+            Contexto.Seleccion.Update(obj);
+            Contexto.SaveChanges();
         }
     }
 }

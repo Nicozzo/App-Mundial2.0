@@ -65,3 +65,5 @@ C:\Users\agust\Source\Repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp
 C:\Users\agust\Source\Repos\App-Mundial2.0\LogicaAplicacion\obj\Debug\netcoreapp3.1\LogicaAplicacion.pdb
 C:\Users\agust\Source\Repos\App-Mundial2.0\LogicaAplicacion\bin\Debug\netcoreapp3.1\Excepciones.dll
 C:\Users\agust\Source\Repos\App-Mundial2.0\LogicaAplicacion\bin\Debug\netcoreapp3.1\Excepciones.pdb
+C:\Users\diego\Source\Repos\App-Mundial2.0\LogicaAplicacion\bin\Debug\netcoreapp3.1\Excepciones.dll
+C:\Users\diego\Source\Repos\App-Mundial2.0\LogicaAplicacion\bin\Debug\netcoreapp3.1\Excepciones.pdb
