@@ -29,18 +29,19 @@ namespace WebApplication3
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllersWithViews();
+            services.AddSession();
             services.AddMvc();
 
-            services.AddSession();
-
             services.AddScoped<IAltaPais, AltaPais>();
-            services.AddScoped<IBuscarID, BuscarID>();
+            services.AddScoped<IBuscarIDPais, BuscarIDPais>();
+            services.AddScoped<ILoginUser, LoginUser>();
             services.AddScoped<IListadoRegion, ListadoRegiones>();
-
+            services.AddScoped<IListadoUsers, ListadoUsers>();
             services.AddScoped<IRepositorioPaises, RepositorioPaises>();
+            services.AddScoped<IRepositorioUser, RepositorioUser>();
             services.AddScoped<IRepositorioRegion, RepositorioRegion>();
-
             services.AddScoped<IListadoPais, ListadoPais>();
             services.AddScoped<IActualizarPais, ActualizarPais>();
 
@@ -63,10 +64,13 @@ namespace WebApplication3
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+
 
             app.UseEndpoints(endpoints =>
             {

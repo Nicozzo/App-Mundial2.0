@@ -797,3 +797,5 @@ C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3
 C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\WebApplication3.dll
 C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\WebApplication3.pdb
 C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\WebApplication3.genruntimeconfig.cache
+C:\Users\agust\source\repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\Razor\Views\User\Login.cshtml.g.cs
+C:\Users\agust\source\repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\Razor\Views\Home\Error.cshtml.g.cs

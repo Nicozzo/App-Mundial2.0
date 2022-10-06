@@ -7,11 +7,11 @@ using LogicaNegocio.InterfacesRepositorios;
 
 namespace LogicaAplicacion.CasosUso
 {
-    public class BuscarID : IBuscarID
+    public class BuscarIDPais : IBuscarIDPais
     {
         public IRepositorioPaises RepoPaises { get; set; }
 
-        public BuscarID(IRepositorioPaises repo)
+        public BuscarIDPais(IRepositorioPaises repo)
         {
             RepoPaises = repo;
         }

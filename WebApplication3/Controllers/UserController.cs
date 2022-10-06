@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LogicaAplicacion.InterfacesCU;
+using LogicaNegocio.Dominio;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,20 +12,12 @@ namespace WebApplication3.Models
     public class UserController : Controller
     {
 
-        //public PaisesController() { 
-            
-        //}
+        public ILoginUser CULoginUser { get; set; }
 
-        //public IActionResult Registro()
-        //{
-        //    //if (!instance.IsLoggedIn())
-        //    //{
-        //    //    return View();
-        //    //}
-        //    //else
-        //    //{
-        //    //    return RedirectToAction("Index", "Dish");
-        //    //}
+        public UserController(ILoginUser CULogin)
+        {
+            CULoginUser = CULogin;
+        }
 
         //}
         //public IActionResult Logout()
@@ -37,42 +32,36 @@ namespace WebApplication3.Models
         //    //{
         //    //    return RedirectToAction("Index", "Dish");
         //    //}
+        public ActionResult Login()
+        {
+            return View();
+        }
 
-        //}
-        //public IActionResult Login()
-        //{
-        //    //if (!instance.IsLoggedIn())
-        //    //{
-        //    //    return View();
-        //    //}
-        //    //else
-        //    //{
-        //    //    return RedirectToAction("Index", "Dish");
-        //    //}
-        //}
-        //[HttpPost]
-        //public IActionResult Login(string email, string password)
-        //{
-        //    //if (!instance.IsLoggedIn())
-        //    //{
-        //    //    User buscado = instance.Login(email, password);
-        //    //    if (buscado != null)
-        //    //    {
-        //    //        HttpContext.Session.SetString("LogueadoEmail", buscado.Email);
-        //    //        HttpContext.Session.SetString("LogueadoRol", buscado.Rol);
-        //    //        return RedirectToAction("Index", "Dish");
-        //    //    }
-        //    //    else
-        //    //    {
-        //    //        ViewBag.msg = "Error en los datos";
-        //    //        return View();
-        //    //    }
-        //    //}
-        //    //else
-        //    //{
-        //    //    return Forbid();
-        //    //}
+        [HttpPost]
+        public IActionResult Login(string email, string password)
+        {
+            //if (!CULoginUser.IsLogged())
+            //{
+                User buscado = CULoginUser.Login(email, password);
+                if (buscado != null)
+                {
+                    HttpContext.Session.SetString("LogueadoEmail", buscado.Email);
+                    HttpContext.Session.SetString("LogueadoRol", buscado.Rol);
+                    return RedirectToAction("Create", "Paises");
+                }
+                else
+                {
+                    ViewBag.msg = "Error en los datos";
+                    return View();
+                }
+            //}
+            //else
+            //{
+            //    return Forbid();
+            //}
 
-        //}
+        }
     }
 }
+
+

@@ -16,7 +16,7 @@ namespace LogicaAccesoDatos.BaseDatos
 
        public DbSet<Region> Regiones { get; set; }
        // public DbSet<Rol> Roles { get; set; }
-      //  public DbSet<User> Users { get; set; }
+       public DbSet<User> Users { get; set; }
 
       //  public DbSet<Partido> Partidos { get; set; }
 
@@ -30,8 +30,7 @@ namespace LogicaAccesoDatos.BaseDatos
           //  DbSet<Fase> Fases;
           //  DbSet<Grupo> Grupos;
            DbSet<Region> Regiones;
-            //DbSet<Rol> Roles;
-           // DbSet<User> Users;
+            DbSet<User> Users;
            // DbSet<Partido> Partidos;
           DbSet<Seleccion> Selecciones;
 
@@ -44,7 +43,10 @@ namespace LogicaAccesoDatos.BaseDatos
 
             modelBuilder.Entity<Region>().HasIndex(region => region.Nombre).IsUnique(true);
 
-           modelBuilder.Entity<Pais>().HasOne(pa => pa.Region).WithMany(Region => Region.Paises);
+            modelBuilder.Entity<User>().HasIndex(user => user.Email).IsUnique(true);
+
+
+            modelBuilder.Entity<Pais>().HasOne(pa => pa.Region).WithMany(Region => Region.Paises);
 
             base.OnModelCreating(modelBuilder);
         }

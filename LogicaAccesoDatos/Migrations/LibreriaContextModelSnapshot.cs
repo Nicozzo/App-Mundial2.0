@@ -110,6 +110,31 @@ namespace LogicaAccesoDatos.Migrations
                     b.ToTable("Seleccion");
                 });
 
+            modelBuilder.Entity("LogicaNegocio.Dominio.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Rol")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
+
+                    b.ToTable("Usuarios");
+                });
+
             modelBuilder.Entity("LogicaNegocio.Dominio.Pais", b =>
                 {
                     b.HasOne("LogicaNegocio.Dominio.Region", "Region")

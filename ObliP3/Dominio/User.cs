@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LogicaNegocio.Dominio
 {
-    [Table("User")]
+    [Table("Usuarios")]
     public class User
     {
 
@@ -14,13 +14,19 @@ namespace LogicaNegocio.Dominio
         [Key]
         private int id;
 
-        private Rol rol;
+        private string rol;
 
         [Required]
-        private string username;
+        private string email;
 
         [Required]
         private string password;
 
+
+        public int Id { get => id; set => id = value; }
+
+        public string Email { get => email; set => email = value; }
+        public string Rol { get => rol; set => rol = value; }
+        public string Password { get => password; set => password = value; }
     }
 }

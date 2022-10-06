@@ -17,10 +17,10 @@ namespace WebApplication3.Controllers
         public IAltaPais CUAltaPais { get; set; }
         public IListadoPais CUListaPais { get; set; }
         public IListadoRegion CUListaRegion { get; set; }
-        public IBuscarID CUBuscarxID { get; set; }
+        public IBuscarIDPais CUBuscarxID { get; set; }
         public IActualizarPais CUActualizarPais { get; set; }
 
-        public PaisesController(IAltaPais cuAlta,   IListadoPais cuLista, IBuscarID cuBuscar, IActualizarPais cuActualizarPais, IListadoRegion cuListadoRegion)
+        public PaisesController(IAltaPais cuAlta,   IListadoPais cuLista, IBuscarIDPais cuBuscar, IActualizarPais cuActualizarPais, IListadoRegion cuListadoRegion)
         {
             CUBuscarxID = cuBuscar;
             CUAltaPais = cuAlta;

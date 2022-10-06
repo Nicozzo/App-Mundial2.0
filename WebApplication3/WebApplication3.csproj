@@ -21,8 +21,4 @@
     <ProjectReference Include="..\ObliP3\LogicaNegocio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\User\" />
-  </ItemGroup>
-
 </Project>

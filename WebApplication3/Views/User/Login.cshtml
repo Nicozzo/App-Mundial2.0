@@ -1,0 +1,28 @@
+﻿@model LogicaNegocio.Dominio.User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row">
+    <div class="col-12 d-flex justify-content-center">
+        <form asp-action="Login" id="formLogin" class="d-flex flex-column justify-content-center" method="post">
+            <h1>¡Ingresá tus datos!</h1>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Correo electrónico</label>
+                <input asp-for="Email" id="txtEmail" class="form-control" />
+                <span asp-validation-for="Email" id="avisoEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Contraseña</label>
+                <input asp-for="Password" id="txtPass" type="password" class="form-control" />
+                <span asp-validation-for="Password" id="avisoPass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<p>@ViewBag.msg</p>

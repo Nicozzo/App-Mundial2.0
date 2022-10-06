@@ -5,7 +5,7 @@ using LogicaNegocio.Dominio;
 
 namespace LogicaAplicacion.InterfacesCU
 {
-    public interface IBuscarID
+    public interface IBuscarIDPais
     {
 
         Pais BuscarId(int id);
