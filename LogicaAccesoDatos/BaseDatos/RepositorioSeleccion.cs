@@ -41,7 +41,7 @@ namespace LogicaAccesoDatos.BaseDatos
         public IEnumerable<Seleccion> FindAll()
         {
             return Contexto.Seleccion
-                   .Include(se => se.pais)
+                   .Include(se => se.Pais)
                    .ToList();
         }
 

@@ -31,6 +31,7 @@ namespace WebApi
             services.AddControllers();
 
             services.AddScoped<IRepositorioSeleccion, RepositorioSeleccion>();
+            services.AddScoped<IRepositorioSeleccionesGrupo, RepositorioSeleccionesGrupo>();
 
             string strCon = Configuration.GetConnectionString("MiConexion");
             services.AddDbContextPool<LibreriaContext>(options => options.UseSqlServer(strCon));

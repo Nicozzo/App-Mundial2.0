@@ -22,7 +22,8 @@ namespace LogicaNegocio.Dominio
 
         public int CantApost { get; set; }
 
-        
-        public Pais pais { get; set; }
+        [ForeignKey("IdPais")]
+        public Pais Pais { get; set; }
+        public int IdPais { get; set; }
     }
 }

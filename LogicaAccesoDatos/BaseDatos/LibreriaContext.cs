@@ -22,6 +22,9 @@ namespace LogicaAccesoDatos.BaseDatos
 
         public DbSet<Seleccion> Seleccion { get; set; }
 
+        public DbSet<Grupo> grupo { get; set; }
+        public DbSet<SeleccionesGrupo> SeleccionesGrupo { get; set; }
+
 
         public LibreriaContext(DbContextOptions<LibreriaContext> opciones) : base(opciones)
         {
