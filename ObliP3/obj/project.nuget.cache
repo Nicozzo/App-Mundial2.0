@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "fmsj5mGfMYgXuIKidk/X1VEJPLnEB5rXZAwbBTOHZ07W5fa76NyelTKizc39r89dKCpH5Al9xiC/YqsCYLzzig==",
   "success": true,
   "projectFilePath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+=======
+  "dgSpecHash": "CE1W8GNfFqcsQQzNwusC+LWvapiJoHFm1uemcTXhZej561xi0TQNEg6ygowNHyIg2sbkBnrLYpzDxv+IH6zmLw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+>>>>>>> 92c8a4596ed53efe966f22995d7a61f6fe244875
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -51,11 +51,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
       "projectName": "LogicaAplicacion",
       "projectPath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
       "packagesPath": "C:\\Users\\agust\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
+      "projectName": "LogicaAplicacion",
+      "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
+      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\obj\\",
+>>>>>>> 92c8a4596ed53efe966f22995d7a61f6fe244875
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -76,8 +84,13 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
               "projectPath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
+=======
+            "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+              "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
+>>>>>>> 92c8a4596ed53efe966f22995d7a61f6fe244875
             }
           }
         }

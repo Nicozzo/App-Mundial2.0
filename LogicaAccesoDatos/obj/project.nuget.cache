@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "zXZeaUpjkQSPyu79Fdsh37PMVAUteV36c+sPRRgcXLVv3bmXL4E830GB3mpB3GBaudVVTCemLqXsl5Xz72KHJQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
+=======
+  "dgSpecHash": "5x4b+i5QT+PwVPRpzlat2q/U/vhAMs67U9d7BDLwVAStpKi4bC4/PIBU2TVHfphzLVBqXHfGe/Xoya7X7r1H1A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
+>>>>>>> 92c8a4596ed53efe966f22995d7a61f6fe244875
   "expectedPackageFiles": [
     "C:\\Users\\agust\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\agust\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

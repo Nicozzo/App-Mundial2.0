@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\LogicaAccesoDatos",
-    "\\LogicaAccesoDatos\\BaseDatos",
-    "\\LogicaAccesoDatos\\Migrations",
-    "\\WebApplication3",
-    "\\WebApplication3\\Controllers"
+    ""
   ],
-  "SelectedNode": "\\WebApplication3\\Controllers\\UserController.cs",
+  "SelectedNode": "\\ObliP3.sln",
   "PreviewInSolutionExplorer": false
 }

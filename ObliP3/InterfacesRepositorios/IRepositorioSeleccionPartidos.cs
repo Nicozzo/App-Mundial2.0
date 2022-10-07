@@ -5,8 +5,7 @@ using LogicaNegocio.Dominio;
 
 namespace LogicaNegocio.InterfacesRepositorios
 {
-     public interface IRepositorioSeleccionesGrupo : IRepositorio<SeleccionesGrupo>
+    public interface IRepositorioSeleccionPartidos : IRepositorio<SeleccionPartidos>
     {
-
     }
 }

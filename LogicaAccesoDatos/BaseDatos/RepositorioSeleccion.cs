@@ -23,8 +23,29 @@ namespace LogicaAccesoDatos.BaseDatos
         }
         public void Add(Seleccion obj)
         {
+            int contador = 0;
             try
             {
+                Selecciones = Contexto.Seleccion
+                   .Include(se => se.Pais)
+                   .Include(se => se.Grupo)
+                   .ToList();
+
+                foreach (var item in Selecciones)
+                {
+                    if (item.IdPais == obj.IdPais)
+                    {
+                        throw new PaisException("El Pais ya tiene una seleccion Asignada");
+                    }
+                    if (item.IdGrupo == obj.IdGrupo)
+                    {
+                        contador++;
+                    }
+                    if (contador >= 4)
+                    {
+                        throw new PaisException("El Grupo ya tiene 4 selecciones");
+                    }
+                }
                 Contexto.Seleccion.Add(obj);
                 Contexto.SaveChanges();
             }
@@ -42,6 +63,7 @@ namespace LogicaAccesoDatos.BaseDatos
         {
             return Contexto.Seleccion
                    .Include(se => se.Pais)
+                   .Include(se => se.Grupo)
                    .ToList();
         }
 
