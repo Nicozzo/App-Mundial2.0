@@ -25,5 +25,9 @@ namespace LogicaNegocio.Dominio
         [ForeignKey("IdPais")]
         public Pais Pais { get; set; }
         public int IdPais { get; set; }
+
+        [ForeignKey("IdGrupo")]
+        public Grupo Grupo { get; set; }
+        public int IdGrupo { get; set; }
     }
 }

@@ -1,11 +1,11 @@
-﻿using Excepciones;
-using LogicaNegocio.Dominio;
-using LogicaNegocio.InterfacesRepositorios;
+﻿using LogicaNegocio.Dominio;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LogicaNegocio.InterfacesRepositorios;
+using Excepciones;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -13,25 +13,21 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class seleccionesGrupoController : ControllerBase
+    public class SeleccionPartidosController : ControllerBase
     {
+        public IRepositorioSeleccionPartidos RepoSeleccionPartido{ get; set; }
 
-        public IRepositorioSeleccionesGrupo RepoSeleccionGrupo { get; set; }
-
-
-        public seleccionesGrupoController(IRepositorioSeleccionesGrupo repo)
+        public SeleccionPartidosController(IRepositorioSeleccionPartidos repo)
         {
-            RepoSeleccionGrupo = repo;
+            RepoSeleccionPartido = repo;
         }
-
-        // GET: api/<seleccionesGrupoController>
+        // GET: api/<SeleccionPartidosController>
         [HttpGet]
         public IActionResult Get()
         {
             try
             {
-
-                return Ok(RepoSeleccionGrupo.FindAll());
+                return Ok(RepoSeleccionPartido.FindAll());
             }
             catch
             {
@@ -39,22 +35,20 @@ namespace WebApi.Controllers
             }
         }
 
-        // GET api/<seleccionesGrupoController>/5
+        // GET api/<SeleccionPartidosController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<seleccionesGrupoController>
+        // POST api/<SeleccionPartidosController>
         [HttpPost]
-        public IActionResult Post([FromBody] SeleccionesGrupo value)
+        public IActionResult Post([FromBody] SeleccionPartidos nuevo)
         {
             try
             {
-                RepoSeleccionGrupo.Add(value);
-
-
+                RepoSeleccionPartido.Add(nuevo);
             }
             catch (PaisException ex)
             {
@@ -66,16 +60,16 @@ namespace WebApi.Controllers
             }
 
 
-            return CreatedAtRoute("Get", new { id = value.ID }, value);
+            return CreatedAtRoute("Get", new { id = nuevo.id }, nuevo);
         }
 
-        // PUT api/<seleccionesGrupoController>/5
+        // PUT api/<SeleccionPartidosController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<seleccionesGrupoController>/5
+        // DELETE api/<SeleccionPartidosController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

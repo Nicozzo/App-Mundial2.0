@@ -4,14 +4,16 @@ using LogicaAccesoDatos.BaseDatos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LogicaAccesoDatos.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    partial class LibreriaContextModelSnapshot : ModelSnapshot
+    [Migration("20221006221111_partidos")]
+    partial class partidos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,9 +125,6 @@ namespace LogicaAccesoDatos.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("IdGrupo")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdPais")
                         .HasColumnType("int");
 
@@ -137,8 +136,6 @@ namespace LogicaAccesoDatos.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("IdGrupo");
 
                     b.HasIndex("IdPais");
 
@@ -165,6 +162,28 @@ namespace LogicaAccesoDatos.Migrations
                     b.HasIndex("idseleccion");
 
                     b.ToTable("SeleccionPartidos");
+                });
+
+            modelBuilder.Entity("LogicaNegocio.Dominio.SeleccionesGrupo", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("IdGrupo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Idseleccion")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("IdGrupo");
+
+                    b.HasIndex("Idseleccion");
+
+                    b.ToTable("SeleccionesGrupo");
                 });
 
             modelBuilder.Entity("LogicaNegocio.Dominio.User", b =>
@@ -203,12 +222,6 @@ namespace LogicaAccesoDatos.Migrations
 
             modelBuilder.Entity("LogicaNegocio.Dominio.Seleccion", b =>
                 {
-                    b.HasOne("LogicaNegocio.Dominio.Grupo", "Grupo")
-                        .WithMany()
-                        .HasForeignKey("IdGrupo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("LogicaNegocio.Dominio.Pais", "Pais")
                         .WithMany()
                         .HasForeignKey("IdPais")
@@ -227,6 +240,21 @@ namespace LogicaAccesoDatos.Migrations
                     b.HasOne("LogicaNegocio.Dominio.Seleccion", "Seleccion")
                         .WithMany()
                         .HasForeignKey("idseleccion")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("LogicaNegocio.Dominio.SeleccionesGrupo", b =>
+                {
+                    b.HasOne("LogicaNegocio.Dominio.Grupo", "Grupo")
+                        .WithMany()
+                        .HasForeignKey("IdGrupo")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LogicaNegocio.Dominio.Seleccion", "seleccion")
+                        .WithMany()
+                        .HasForeignKey("Idseleccion")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

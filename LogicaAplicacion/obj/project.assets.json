@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
       "projectName": "LogicaAplicacion",
-      "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
+      "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
       "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAplicacion\\obj\\",
+      "outputPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,8 +71,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
-              "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
+            "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+              "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
             }
           }
         }
