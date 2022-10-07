@@ -1,15 +1,21 @@
-﻿@model IEnumerable<LogicaNegocio.Dominio.Pais>
+﻿@using Microsoft.AspNetCore.Http
+
+@model IEnumerable<LogicaNegocio.Dominio.Pais>
 
 @{
     ViewData["Title"] = "ListaPais";
 }
 
 
- 
+
 <h1>ListaPais</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    @if (Context.Session.GetString("LogueadoEmail") == null)
+    {
+
+        <a asp-action="Create">Create New</a>
+    }
 </p>
 <table class="table">
     <thead>
@@ -36,33 +42,33 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model)
-{
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodigoIso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pbi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Poblacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Imagen)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) 
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodigoIso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pbi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Poblacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imagen)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
- 
+

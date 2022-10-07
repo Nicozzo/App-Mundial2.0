@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "oj6p2mMRNzYIQ2y3JRCipXp34rjVzA0QZFyqaZmYe1Z11gt9v4eG5v4UoPsPHh7+V2MFL/O7BwR8BMaYrQ+FCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\WebApplication3\\WebApplication3.csproj",
-=======
-  "dgSpecHash": "gVF+geZpAutC1X8nGt/ArtlMqvqJdClk7IasihpeOqFTKPCwOk1jgkuXE7LE8ksWzRpMoyrkYJt1pLi+VvOjLg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApplication3\\WebApplication3.csproj",
->>>>>>> 92c8a4596ed53efe966f22995d7a61f6fe244875
   "expectedPackageFiles": [
     "C:\\Users\\agust\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\agust\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -169,5 +163,12 @@
     "C:\\Users\\agust\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\agust\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\WebApplication3\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -47,6 +47,7 @@ namespace LogicaAccesoDatos.BaseDatos
                     }
                 }
                 Contexto.Seleccion.Add(obj);
+
                 Contexto.SaveChanges();
             }
             catch (PaisException)

@@ -9,7 +9,6 @@ namespace LogicaAplicacion.CasosUso
 {
     public class LoginUser : ILoginUser
     {
-        public static LoginUser Instance { get; set; }
         public User SessionUser { get; set; }
         public IRepositorioUser RepoUser { get; set; }
 
@@ -31,8 +30,7 @@ namespace LogicaAplicacion.CasosUso
 
         public void Logout()
         {
-            Instance.SessionUser = null;
-
+            SessionUser = null;
         }
 
         public User Login(string email, string pass)
@@ -43,7 +41,7 @@ namespace LogicaAplicacion.CasosUso
                 if (user.Email.Equals(email) && user.Password.Equals(pass))
                 {
                     u = RepoUser.FindByEmail(user.Email);
-                    Instance.SessionUser = u;
+                    SessionUser = u;
                     break;
                 }
             }
@@ -52,7 +50,7 @@ namespace LogicaAplicacion.CasosUso
 
         public bool IsLogged()
         {
-            return !(Instance.SessionUser == null);
+            return !(SessionUser == null);
         }
 
     }

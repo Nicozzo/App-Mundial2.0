@@ -19,19 +19,17 @@ namespace WebApplication3.Models
             CULoginUser = CULogin;
         }
 
-        //}
-        //public IActionResult Logout()
-        //{
-        //    //if (instance.IsLoggedIn())
-        //    //{
-        //    //    instance.Logout();
-        //    //    HttpContext.Session.Clear();
-        //    //    return RedirectToAction("Index", "Dish");
-        //    //}
-        //    //else
-        //    //{
-        //    //    return RedirectToAction("Index", "Dish");
-        //    //}
+        public IActionResult Logout()
+        {
+            
+                CULoginUser.Logout();
+                HttpContext.Session.Clear();
+                Console.WriteLine(HttpContext.Session.GetString("LogueadoRol"));
+
+                return RedirectToAction("Index", "Paises");
+       
+        }
+
         public ActionResult Login()
         {
             return View();
@@ -40,8 +38,8 @@ namespace WebApplication3.Models
         [HttpPost]
         public IActionResult Login(string email, string password)
         {
-            //if (!CULoginUser.IsLogged())
-            //{
+            if (!CULoginUser.IsLogged())
+            {
                 User buscado = CULoginUser.Login(email, password);
                 if (buscado != null)
                 {
@@ -54,14 +52,14 @@ namespace WebApplication3.Models
                     ViewBag.msg = "Error en los datos";
                     return View();
                 }
-            //}
-            //else
-            //{
-            //    return Forbid();
-            //}
+            }
+            else
+            {
+                return RedirectToAction("Error", "Home");
+            }
 
         }
-    }
+        }
 }
 
 

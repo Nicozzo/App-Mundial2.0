@@ -36,12 +36,20 @@ namespace LogicaAccesoDatos.BaseDatos
         }
         public IEnumerable<User> FindAll()
         {
-            return Contexto.Users;
+            return Contexto.Users.ToList();
         }
 
-        public User FindByEmail(string mail)
+        public User FindByEmail(string email)
         {
-            return Contexto.Users.Where(pa => pa.Email == mail).ToList().SingleOrDefault();
+            User aux = null;
+            foreach (var item in Contexto.Users.ToList())
+            {
+                if (item.Email == email) {
+                    aux = item;
+                }
+            }
+
+            return aux;
         }
 
         public User FindById(int id)
