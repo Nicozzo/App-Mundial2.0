@@ -14,7 +14,6 @@ namespace LogicaAccesoDatos.BaseDatos
 
         public static List<User> Users { get; set; } = new List<User>();
 
-        public ILazyLoader LazyLoader { get; set; }
 
         public RepositorioUser(LibreriaContext contexto)
         {
@@ -42,7 +41,7 @@ namespace LogicaAccesoDatos.BaseDatos
 
         public User FindByEmail(string mail)
         {
-            return Contexto.Users.Where(pa => pa.Email == mail).SingleOrDefault();
+            return Contexto.Users.Where(pa => pa.Email == mail).ToList().SingleOrDefault();
         }
 
         public User FindById(int id)
