@@ -42,12 +42,13 @@ namespace LogicaAccesoDatos.BaseDatos
                     }
                 }
 
-
+                int cont = 0;
 
                 foreach (var item in SeleccionesPartido)
                 {
                     if (item.idpartido == obj.idpartido)
                     {
+                        cont++;
                         if (item.idseleccion == obj.idseleccion)
                         {
                             throw new PaisException("La seleccion no puede jugar contra ella misma");
@@ -57,15 +58,27 @@ namespace LogicaAccesoDatos.BaseDatos
                         throw new PaisException("Las selecciones no estan en el mismo grupo");
                     }
 
-                }
-
-                    if (item.idseleccion != obj.idseleccion)
-                    {
-                        if (item.idpartido == obj.idpartido)
+                        foreach (var item2 in SeleccionesPartido)
                         {
-                            throw new PaisException("Ya Jugaron Entre ellos");
+                            if (item.idseleccion == item2.idseleccion)
+                            {
+                                foreach (var item3 in SeleccionesPartido)
+                                {
+                                    if (item3.idseleccion == obj.idseleccion)
+                                    {
+                                        if (item2.idpartido == item3.idpartido)
+                                        {
+                                            throw new PaisException("Las selecciones ya jugaron entre si");
+                                        }
+                                    }
+                                }
+                            }
+
                         }
-                    }
+
+                     }
+
+                    
             }
             Contexto.SeleccionPartidos.Add(obj);
             Contexto.SaveChanges();
