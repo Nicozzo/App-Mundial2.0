@@ -6,8 +6,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using LogicaNegocio.Dominio;
 using LogicaAplicacion.InterfacesCU;
+using Microsoft.AspNetCore.Hosting;
 using Excepciones;
 using WebApplication3.Models;
+using System.IO;
 
 namespace WebApplication3.Controllers
 {
@@ -19,14 +21,17 @@ namespace WebApplication3.Controllers
         public IListadoRegion CUListaRegion { get; set; }
         public IBuscarIDPais CUBuscarxID { get; set; }
         public IActualizarPais CUActualizarPais { get; set; }
+        public IWebHostEnvironment WHEnv { get; set; }
 
-        public PaisesController(IAltaPais cuAlta,   IListadoPais cuLista, IBuscarIDPais cuBuscar, IActualizarPais cuActualizarPais, IListadoRegion cuListadoRegion)
+
+        public PaisesController(IAltaPais cuAlta,   IListadoPais cuLista, IBuscarIDPais cuBuscar, IActualizarPais cuActualizarPais, IListadoRegion cuListadoRegion, IWebHostEnvironment whenv)
         {
             CUBuscarxID = cuBuscar;
             CUAltaPais = cuAlta;
             CUListaPais = cuLista;
             CUActualizarPais = cuActualizarPais;
             CUListaRegion = cuListadoRegion;
+            WHEnv = whenv;
         }
 
         public ActionResult Index()
@@ -45,7 +50,7 @@ namespace WebApplication3.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            RegionModel rm = new RegionModel();
+            RegionViewModel rm = new RegionViewModel();
             rm.Regiones = CUListaRegion.ObtenerListado();
             return View(rm);
         }
@@ -53,13 +58,39 @@ namespace WebApplication3.Controllers
         // POST: PaisesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(RegionModel nuevo)
+        public ActionResult Create(RegionViewModel nuevo)
         {
             try
             {
                 Pais pais = nuevo.Pais;
                 pais.IdRegion = nuevo.IdRegionSeleccionada;
+
+                FileInfo fi = new FileInfo(nuevo.Imagen.FileName);
+
+                string ext = fi.Extension;
+
+              
+                string nomArchivo = nuevo.Pais.Id + ext;
+
+
+                pais.Imagen = nomArchivo;
+                
                 CUAltaPais.Alta(pais);
+              
+
+                string rutaWebApp = WHEnv.WebRootPath;
+
+                string rutaCarpeta = Path.Combine(rutaWebApp, "PaisesImg");
+
+                //CREO LA RUTA COMPLETA AL ARCHIVO
+                string rutaArchivo = Path.Combine(rutaCarpeta, nomArchivo);
+
+                //CREO UN FILESTREAM PARA GUARDAR EL ARCHIVO EN EL FILESISTEM
+                FileStream fs = new FileStream(rutaArchivo, FileMode.Create);
+
+                //LO GUARDO USANDO EL FILESTREAM
+                //pais.Imagen.CopyTo(fs);
+
                 return RedirectToAction("Index", "Paises");
             }
             catch (PaisException e)
