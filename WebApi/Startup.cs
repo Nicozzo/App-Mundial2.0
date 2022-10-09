@@ -32,6 +32,7 @@ namespace WebApi
 
             services.AddScoped<IRepositorioSeleccion, RepositorioSeleccion>();
             services.AddScoped<IRepositorioSeleccionPartidos, RepositorioSeleccionPartido>();
+            services.AddScoped<IRepositorioPartido, RepositorioPartido>();
 
 
             string strCon = Configuration.GetConnectionString("MiConexion");
