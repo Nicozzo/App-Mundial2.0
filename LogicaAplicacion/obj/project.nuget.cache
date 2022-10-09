@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vig0SKZTYkjyudswwjdNcbrslWHessc36bEuXIvsLW/v74JEQUvyU47EaN0Nw59qvStyh6NNw/NXTLhLNmZFjw==",
+  "dgSpecHash": "vptHZIBWNQC7jv/KEdxk6V7gq31SekYDMLmJ2yTpfbNPT6aWpNlEwFEPxRk70e5tg819rp4Ajo3E4ZNHuynHPg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
+  "projectFilePath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
