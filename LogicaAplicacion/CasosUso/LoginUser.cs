@@ -17,16 +17,16 @@ namespace LogicaAplicacion.CasosUso
             RepoUser = repoUser;
         }
 
-        //public User getInstancia()
-        //{
-        //    if (Instance.SessionUser == null)
-        //    {
-        //        return Instance.SessionUser;
-        //    }
-        //    else { 
-                
-        //    }
-        //}
+        public User GetInstance()
+        {
+          return SessionUser;
+
+        }
+
+        public void SetInstance(User user) {
+
+            SessionUser = user;
+        }
 
         public void Logout()
         {
@@ -41,7 +41,6 @@ namespace LogicaAplicacion.CasosUso
                 if (user.Email.Equals(email) && user.Password.Equals(pass))
                 {
                     u = RepoUser.FindByEmail(user.Email);
-                    SessionUser = u;
                     break;
                 }
             }

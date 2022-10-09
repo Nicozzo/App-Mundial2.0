@@ -14,6 +14,7 @@ namespace WebApplication3.Models
 
         public ILoginUser CULoginUser { get; set; }
 
+
         public UserController(ILoginUser CULogin)
         {
             CULoginUser = CULogin;
@@ -21,31 +22,43 @@ namespace WebApplication3.Models
 
         public IActionResult Logout()
         {
-            
+            if (HttpContext.Session.GetString("LogueadoEmail") != null)
+            {
                 CULoginUser.Logout();
                 HttpContext.Session.Clear();
                 Console.WriteLine(HttpContext.Session.GetString("LogueadoRol"));
 
                 return RedirectToAction("Index", "Paises");
+            }
+            else
+            {
+                return RedirectToAction("Error", "Home");
+            }
+           
        
         }
 
         public ActionResult Login()
         {
-            return View();
+            if (HttpContext.Session.GetString("LogueadoEmail") == null)
+            {
+                return View();
+            }
+            else {
+                    return RedirectToAction("Error", "Home");
+            }
         }
 
         [HttpPost]
         public IActionResult Login(string email, string password)
         {
-            if (!CULoginUser.IsLogged())
-            {
                 User buscado = CULoginUser.Login(email, password);
+
                 if (buscado != null)
                 {
                     HttpContext.Session.SetString("LogueadoEmail", buscado.Email);
                     HttpContext.Session.SetString("LogueadoRol", buscado.Rol);
-                    return RedirectToAction("Create", "Paises");
+                    return RedirectToAction("Index", "Paises");
                 }
                 else
                 {
@@ -53,12 +66,7 @@ namespace WebApplication3.Models
                     return View();
                 }
             }
-            else
-            {
-                return RedirectToAction("Error", "Home");
-            }
 
-        }
         }
 }
 

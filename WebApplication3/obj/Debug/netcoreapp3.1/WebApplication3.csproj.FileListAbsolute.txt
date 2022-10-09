@@ -785,7 +785,6 @@ C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3
 C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\Razor\Views\Paises\Create.cshtml.g.cs
 C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\Razor\Views\Paises\Edit.cshtml.g.cs
 C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\Razor\Views\Paises\Index.cshtml.g.cs
-C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\agust\Source\Repos\App-Mundial2.0\WebApplication3\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs

@@ -61,6 +61,7 @@ namespace WebApi.Controllers
         {
             try
             {
+                nuevo.Validar();
                 RepoSeleccion.Add(nuevo);
             }
             catch (PaisException ex)

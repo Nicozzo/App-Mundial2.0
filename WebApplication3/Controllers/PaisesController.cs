@@ -40,19 +40,20 @@ namespace WebApplication3.Controllers
             return View(paises);
         }
 
-        // GET: PaisesController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
         // GET: PaisesController/Create
         [HttpGet]
         public ActionResult Create()
         {
-            RegionViewModel rm = new RegionViewModel();
-            rm.Regiones = CUListaRegion.ObtenerListado();
-            return View(rm);
+            if (HttpContext.Session.GetString("LogueadoEmail") != null)
+            {
+                RegionViewModel rm = new RegionViewModel();
+                rm.Regiones = CUListaRegion.ObtenerListado();
+                return View(rm);
+            }
+            else
+            {
+                return RedirectToAction("Error", "Home");
+            }
         }
 
         // POST: PaisesController/Create
@@ -64,13 +65,19 @@ namespace WebApplication3.Controllers
             {
                 Pais pais = nuevo.Pais;
                 pais.IdRegion = nuevo.IdRegionSeleccionada;
+               
+                foreach (Region item in CUListaRegion.ObtenerListado())
+                {
+                    if (item.IdRegion == pais.IdRegion) {
+                        pais.Region = item;
+                    }
+                }
 
                 FileInfo fi = new FileInfo(nuevo.Imagen.FileName);
 
                 string ext = fi.Extension;
 
-              
-                string nomArchivo = nuevo.Pais.Id + ext;
+                string nomArchivo = nuevo.Pais.Nombre + ext;
 
 
                 pais.Imagen = nomArchivo;
@@ -80,16 +87,14 @@ namespace WebApplication3.Controllers
 
                 string rutaWebApp = WHEnv.WebRootPath;
 
-                string rutaCarpeta = Path.Combine(rutaWebApp, "PaisesImg");
+                string rutaCarpeta = Path.Combine(rutaWebApp, "img");
 
-                //CREO LA RUTA COMPLETA AL ARCHIVO
                 string rutaArchivo = Path.Combine(rutaCarpeta, nomArchivo);
 
-                //CREO UN FILESTREAM PARA GUARDAR EL ARCHIVO EN EL FILESISTEM
                 FileStream fs = new FileStream(rutaArchivo, FileMode.Create);
 
-                //LO GUARDO USANDO EL FILESTREAM
-                //pais.Imagen.CopyTo(fs);
+
+                nuevo.Imagen.CopyTo(fs);
 
                 return RedirectToAction("Index", "Paises");
             }
@@ -109,23 +114,31 @@ namespace WebApplication3.Controllers
         // GET: PaisesController/Edit/5
         public ActionResult Edit(int id)
         {
-            Pais aEditar = CUBuscarxID.BuscarId(id);
-
-            try
+            if (HttpContext.Session.GetString("LogueadoEmail") != null)
             {
-                if (aEditar == null)
+                Pais aEditar = CUBuscarxID.BuscarId(id);
+
+                try
                 {
-                    ViewBag.Error = "El Pais no existe";
+                    if (aEditar == null)
+                    {
+                        ViewBag.Error = "El Pais no existe";
+                        return View();
+                    }
+
+                    return View(aEditar);
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Error = "Ocurrió un error: " + ex.Message;
                     return View();
                 }
-
-                return View(aEditar);
             }
-            catch (Exception ex)
+            else
             {
-                ViewBag.Error = "Ocurrió un error: " + ex.Message;
-                return View();
+                return RedirectToAction("Error", "Home");
             }
+           
         }
 
         // POST: PaisesController/Edit/5
@@ -162,10 +175,16 @@ namespace WebApplication3.Controllers
         // GET: PaisesController/Delete/5
         public ActionResult Delete(int id)
         {
-             return View();
+            if (HttpContext.Session.GetString("LogueadoEmail") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Error", "Home");
+            }
         }
 
-        // POST: PaisesController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

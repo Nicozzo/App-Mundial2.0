@@ -22,7 +22,6 @@ namespace LogicaNegocio.Dominio
         [MaxLength(3), Required(ErrorMessage = "El nombre es obligatorio")]
         public string CodigoIso { get; set; }
 
-        
         public int Pbi { get; set; }
 
         public int Poblacion { get; set; }

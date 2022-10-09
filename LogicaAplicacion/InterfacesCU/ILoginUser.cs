@@ -9,12 +9,12 @@ namespace LogicaAplicacion.InterfacesCU
     public interface ILoginUser
     {
 
-        //User getInstancia();
+        User GetInstance();
+        void SetInstance(User user);
 
         User Login(string email, string pass);
 
         void Logout();
 
-        bool IsLogged();
     }
 }

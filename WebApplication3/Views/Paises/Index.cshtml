@@ -6,14 +6,10 @@
     ViewData["Title"] = "ListaPais";
 }
 
-
-
 <h1>ListaPais</h1>
-
 <p>
-    @if (Context.Session.GetString("LogueadoEmail") == null)
-    {
-
+    @if (Context.Session.GetString("LogueadoEmail") != null)
+    { 
         <a asp-action="Create">Create New</a>
     }
 </p>
@@ -44,30 +40,34 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CodigoIso)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Pbi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Poblacion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Imagen)
-                </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoIso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pbi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Poblacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagen)
+            </td>
+
+            @if (Context.Session.GetString("LogueadoEmail") != null)
+            {
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id })
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
-            </tr>
+            }
+        </tr>
         }
     </tbody>
 </table>
