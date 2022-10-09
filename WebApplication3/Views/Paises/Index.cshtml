@@ -23,13 +23,17 @@
                 @Html.DisplayNameFor(model => model.Nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CodigoIso)
+                Codigo Iso
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Pbi)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Poblacion)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Region)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Imagen)
@@ -57,14 +61,17 @@
                 @Html.DisplayFor(modelItem => item.Poblacion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Imagen)
+                @Html.DisplayFor(modelItem => item.Region.Nombre)
+            </td>
+            <td>
+                <img src="img/@item.Imagen" height="60" width="85"/>
             </td>
 
             @if (Context.Session.GetString("LogueadoEmail") != null)
             {
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    @Html.ActionLink("Edit", "Edit", item.Id)
+                    @Html.ActionLink("Delete", "Delete", item.Id)
                 </td>
             }
         </tr>

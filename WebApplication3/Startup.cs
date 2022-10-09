@@ -35,6 +35,7 @@ namespace WebApplication3
             services.AddMvc();
 
             services.AddScoped<IAltaPais, AltaPais>();
+            services.AddScoped<IBorrarPais, BorrarPais>();
             services.AddScoped<IBuscarIDPais, BuscarIDPais>();
             services.AddScoped<ILoginUser, LoginUser>();
             services.AddScoped<IListadoRegion, ListadoRegiones>();

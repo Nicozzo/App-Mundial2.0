@@ -63,9 +63,15 @@ namespace LogicaNegocio.Dominio
         {
 
             this.CodigoIso.Trim();
-            if (!CodigoIso.StartsWith(Nombre.Substring(0, 1))) { 
+            string pra = Nombre.Substring(0, 1);
+            if (!(CodigoIso.StartsWith(pra))) { 
                 throw new PaisException("El codigo debe comenzar con la primer letra del nombre del pais");
             }
+        }
+
+        public override string ToString()
+        {
+            return Nombre + " | " + CodigoIso ;
         }
 
     }

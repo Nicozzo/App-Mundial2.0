@@ -14,7 +14,6 @@ namespace LogicaNegocio.Dominio
         [Key]
         public int IdRegion { get;   set; }
 
-        
         [Required]
         public string Nombre { get; set; }
 
@@ -32,5 +31,11 @@ namespace LogicaNegocio.Dominio
                 throw new RegionException("La región debe existir (continente");
             }
         }
+
+        public override string ToString()
+        {
+            return Nombre + " | " + Paises.ToString();
+        }
     }
+
 }

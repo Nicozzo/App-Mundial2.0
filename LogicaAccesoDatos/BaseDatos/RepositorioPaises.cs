@@ -26,6 +26,8 @@ namespace LogicaAccesoDatos.BaseDatos
             try
             {
                 obj.Validar();
+
+                
                 Contexto.Paises.Add(obj);
                 Contexto.SaveChanges();
             }
@@ -35,7 +37,7 @@ namespace LogicaAccesoDatos.BaseDatos
             }
             catch (Exception e)
             {
-                throw new Exception("No se pudo realizar el alta de autor", e);
+                throw new Exception("No se pudo realizar el alta", e);
             }
         }
 
@@ -53,21 +55,29 @@ namespace LogicaAccesoDatos.BaseDatos
 
         public void Remove(int id)
         {
-           
-            
                 Pais aBorrar = Contexto.Paises.Find(id);
                 if (aBorrar == null) throw new Exception("No existe dicho pais a borrar");
                 Contexto.Paises.Remove(aBorrar);
                 Contexto.SaveChanges();
-
-            
         }
 
         public void Update(Pais obj)
         {
-            obj.Validar();
-            Contexto.Paises.Update(obj);
-            Contexto.SaveChanges();
+            try
+            {
+                    obj.Validar();
+                    Contexto.Paises.Update(obj);
+                    Contexto.SaveChanges();
+            
+            }
+            catch (PaisException) {
+                throw;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("No se pudo realizar la operación", e);
+            }
+
         }
 
         public IEnumerable<Pais> ObtainRegion()

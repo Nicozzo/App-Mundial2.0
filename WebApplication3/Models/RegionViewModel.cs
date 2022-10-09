@@ -14,5 +14,6 @@ namespace WebApplication3.Models
         public Pais Pais { get; set; }
         public int IdRegionSeleccionada { get; set; }
         public IFormFile Imagen { get; set; }
+
     }
 }

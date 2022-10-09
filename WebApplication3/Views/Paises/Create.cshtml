@@ -15,49 +15,52 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-            <form asp-action="Create" enctype="multipart/form-data">
-        
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="Pais.Nombre" class="control-label"></label>
-                    <input asp-for="Pais.Nombre" class="form-control" />
-                    <span asp-validation-for="Pais.Nombre" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Pais.CodigoIso" class="control-label"></label>
-                    <input asp-for="Pais.CodigoIso" class="form-control" />
-                    <span asp-validation-for="Pais.CodigoIso" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Pais.Pbi" class="control-label"></label>
-                    <input asp-for="Pais.Pbi" class="form-control" />
-                    <span asp-validation-for="Pais.Pbi" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Pais.Poblacion" class="control-label"></label>
-                    <input asp-for="Pais.Poblacion" class="form-control" />
-                    <span asp-validation-for="Pais.Poblacion" class="text-danger"></span>
-                </div>
+        <form id="formCrear" method="post" asp-action="Create" enctype="multipart/form-data">
 
-                <div class="form-group">
-                    <label asp-for="Imagen" class="control-label"></label>
-                    <input asp-for="Imagen" class="form-control" />
-                    <span asp-validation-for="Imagen" class="text-danger"></span>
-                </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Pais.Nombre" class="control-label"></label>
+                <input asp-for="Pais.Nombre" id="txtNombre" class="form-control" />
+                <span asp-validation-for="Pais.Nombre"  class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pais.CodigoIso" class="control-label"></label>
+                <input asp-for="Pais.CodigoIso" id="codigoISo" class="form-control" />
+                <span asp-validation-for="Pais.CodigoIso" id="avisoCod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pais.Pbi" class="control-label"></label>
+                <input asp-for="Pais.Pbi" class="form-control" />
+                <span asp-validation-for="Pais.Pbi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pais.Poblacion" class="control-label"></label>
+                <input asp-for="Pais.Poblacion" class="form-control" />
+                <span asp-validation-for="Pais.Poblacion" class="text-danger"></span>
+            </div>
 
-                <div class="form-group">
-                    <select id="Regiones" name="IdRegionSeleccionada">
-                        @foreach (var p in Model.Regiones)
-                        {
-                            <option value="@p.IdRegion">@p.Nombre</option>
-                        }
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
-            </form>
-        </div>
+            <div class="form-group">
+                <label asp-for="Imagen" class="control-label"></label>
+                <input asp-for="Imagen" class="form-control" />
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <select id="Regiones" name="IdRegionSeleccionada">
+
+                    @foreach (var p in Model.Regiones)
+                    {
+                        <option value="@p.IdRegion">@p.Nombre</option>
+                    }
+                </select>
+                <span id="Regiones" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
 </div>
 
 <div>
@@ -66,4 +69,31 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    }
+
+    @*<script>
+        document.querySelector("#formCrear").addEventListener('submit', validarDatos);
+
+        function validarDatos(evento) {
+
+            evento.preventDefault();
+
+            let nombre = document.querySelector("#formCrear").value;
+            let codigo = document.querySelector("#codigoISo").value;
+
+
+            let primeraLetraP = nombre.charAt(0);
+            let primeraLectraC = codigo.charAt(0);
+
+            if (primeraLectraC == primeraLetraP) {
+                this.submit();
+            } else {
+                document.querySelector("#avisoCod").innerHTML = "El código debe comenzar con la primera letra del nombre del pais";
+            }
+
+
+        }
+
+
+
+    </script>*@
