@@ -11,6 +11,7 @@ namespace LogicaNegocio.Dominio
     [Table("Seleccion")]
     public class Seleccion
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int ID { get; set; }
 
@@ -30,6 +31,8 @@ namespace LogicaNegocio.Dominio
         [ForeignKey("IdGrupo")]
         public Grupo Grupo { get; set; }
         public int IdGrupo { get; set; }
+
+
 
         public void Validar()
         {

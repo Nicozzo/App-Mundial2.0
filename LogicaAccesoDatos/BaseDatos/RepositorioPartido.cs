@@ -33,18 +33,17 @@ namespace LogicaAccesoDatos.BaseDatos
                 Partidos = Contexto.Partido
                    .ToList();
 
+
                 if ((obj.date.Hour != 07) && (obj.date.Hour != 10) && (obj.date.Hour != 13) && (obj.date.Hour != 16))
                 {
                     throw new PaisException("La hora ingresada no es una de las 4 horas posibles");
                 }
 
-
-
                 if (obj.date < incial || obj.date > final)
                 {
                     throw new PaisException("La fecha no queda entre las dos fechas tope (20/ 11 /2022 y 2 / 12 / 2022)");
                 }
-
+               
                 foreach (var item in Partidos)
                 {
 

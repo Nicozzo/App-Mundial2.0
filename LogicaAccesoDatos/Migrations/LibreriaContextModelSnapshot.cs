@@ -109,6 +109,35 @@ namespace LogicaAccesoDatos.Migrations
                     b.ToTable("Regiones");
                 });
 
+            modelBuilder.Entity("LogicaNegocio.Dominio.ResultadoPartido", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Amarrillas")
+                        .HasColumnType("int");
+
+                    b.Property<int>("dobleAmarrilla")
+                        .HasColumnType("int");
+
+                    b.Property<int>("goles")
+                        .HasColumnType("int");
+
+                    b.Property<int>("idseleccionPartido")
+                        .HasColumnType("int");
+
+                    b.Property<int>("rojas")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("idseleccionPartido");
+
+                    b.ToTable("ResultadoPartido");
+                });
+
             modelBuilder.Entity("LogicaNegocio.Dominio.Seleccion", b =>
                 {
                     b.Property<int>("ID")
@@ -145,7 +174,7 @@ namespace LogicaAccesoDatos.Migrations
                     b.ToTable("Seleccion");
                 });
 
-            modelBuilder.Entity("LogicaNegocio.Dominio.SeleccionPartidos", b =>
+            modelBuilder.Entity("LogicaNegocio.Dominio.SeleccionPartido", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -164,7 +193,7 @@ namespace LogicaAccesoDatos.Migrations
 
                     b.HasIndex("idseleccion");
 
-                    b.ToTable("SeleccionPartidos");
+                    b.ToTable("SeleccionPartido");
                 });
 
             modelBuilder.Entity("LogicaNegocio.Dominio.User", b =>
@@ -201,6 +230,15 @@ namespace LogicaAccesoDatos.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("LogicaNegocio.Dominio.ResultadoPartido", b =>
+                {
+                    b.HasOne("LogicaNegocio.Dominio.SeleccionPartido", "seleccionPartido")
+                        .WithMany()
+                        .HasForeignKey("idseleccionPartido")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("LogicaNegocio.Dominio.Seleccion", b =>
                 {
                     b.HasOne("LogicaNegocio.Dominio.Grupo", "Grupo")
@@ -216,7 +254,7 @@ namespace LogicaAccesoDatos.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("LogicaNegocio.Dominio.SeleccionPartidos", b =>
+            modelBuilder.Entity("LogicaNegocio.Dominio.SeleccionPartido", b =>
                 {
                     b.HasOne("LogicaNegocio.Dominio.Partido", "partido")
                         .WithMany()

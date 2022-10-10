@@ -9,19 +9,20 @@ using System;
 
 namespace LogicaAccesoDatos.BaseDatos
 {
-    public class RepositorioSeleccionPartido : IRepositorioSeleccionPartidos
+    public class RepositorioSeleccionPartido : IRepositorioSeleccionPartido
     {
-
         public LibreriaContext Contexto { get; set; }
 
-        public static List<SeleccionPartidos> SeleccionesPartido { get; set; } = new List<SeleccionPartidos>();
+        public static List<SeleccionPartido> SeleccionesPartido { get; set; } = new List<SeleccionPartido>();
 
 
         public RepositorioSeleccionPartido(LibreriaContext contexto)
         {
             Contexto = contexto;
         }
-        public void Add(SeleccionPartidos obj)
+
+
+        public void Add(SeleccionPartido obj)
         {
             try
             {
@@ -29,37 +30,38 @@ namespace LogicaAccesoDatos.BaseDatos
                     .Include(sp => sp.partido)
                     .Include(sp => sp.Seleccion)
                     .ToList();
-                
+
                 List<Seleccion> selecciones = new List<Seleccion>();
                 selecciones = Contexto.Seleccion
                                 .ToList();
                 Seleccion aux = null;
                 foreach (var item in selecciones)
                 {
-                    if (item.ID == obj.idseleccion )
+                    if (item.ID == obj.idseleccion)
                     {
                         aux = item;
                     }
                 }
 
-                int cont = 0;
+              
 
                 foreach (var item in SeleccionesPartido)
                 {
                     if (item.idpartido == obj.idpartido)
                     {
-                        cont++;
+                        
                         if (item.idseleccion == obj.idseleccion)
                         {
                             throw new PaisException("La seleccion no puede jugar contra ella misma");
                         }
                         if (item.Seleccion.IdGrupo != aux.IdGrupo)
-                    {
-                        throw new PaisException("Las selecciones no estan en el mismo grupo");
-                    }
+                        {
+                            throw new PaisException("Las selecciones no estan en el mismo grupo");
+                        }
 
                         foreach (var item2 in SeleccionesPartido)
                         {
+                           
                             if (item.idseleccion == item2.idseleccion)
                             {
                                 foreach (var item3 in SeleccionesPartido)
@@ -76,12 +78,12 @@ namespace LogicaAccesoDatos.BaseDatos
 
                         }
 
-                     }
+                    }
 
-                    
-            }
-            Contexto.SeleccionPartidos.Add(obj);
-            Contexto.SaveChanges();
+
+                }
+                Contexto.SeleccionPartidos.Add(obj);
+                Contexto.SaveChanges();
             }
             catch (PaisException)
             {
@@ -93,27 +95,27 @@ namespace LogicaAccesoDatos.BaseDatos
             }
         }
 
-        public IEnumerable<SeleccionPartidos> FindAll()
+        public IEnumerable<SeleccionPartido> FindAll()
         {
             return Contexto.SeleccionPartidos
-                    .Include(sp => sp.partido)
-                    .Include(sp => sp.Seleccion)
-                    .ToList();
+                     .Include(sp => sp.partido)
+                     .Include(sp => sp.Seleccion)
+                     .ToList();
         }
 
-        public SeleccionPartidos FindById(int id)
+        public SeleccionPartido FindById(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void Remove(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public void Update(SeleccionPartidos obj)
+        public void Update(SeleccionPartido obj)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

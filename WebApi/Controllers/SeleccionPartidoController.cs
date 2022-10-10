@@ -13,15 +13,15 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SeleccionPartidosController : ControllerBase
+    public class SeleccionPartidoController : ControllerBase
     {
-        public IRepositorioSeleccionPartidos RepoSeleccionPartido{ get; set; }
+        public IRepositorioSeleccionPartido RepoSeleccionPartido { get; set; }
 
-        public SeleccionPartidosController(IRepositorioSeleccionPartidos repo)
+        public SeleccionPartidoController(IRepositorioSeleccionPartido repo)
         {
             RepoSeleccionPartido = repo;
         }
-        // GET: api/<SeleccionPartidosController>
+        // GET: api/<SeleccionPartidoController>
         [HttpGet]
         public IActionResult Get()
         {
@@ -35,16 +35,16 @@ namespace WebApi.Controllers
             }
         }
 
-        // GET api/<SeleccionPartidosController>/5
+        // GET api/<SeleccionPartidoController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<SeleccionPartidosController>
+        // POST api/<SeleccionPartidoController>
         [HttpPost]
-        public IActionResult Post([FromBody] SeleccionPartidos nuevo)
+        public IActionResult Post([FromBody] SeleccionPartido nuevo)
         {
             try
             {
@@ -63,13 +63,13 @@ namespace WebApi.Controllers
             return CreatedAtRoute("Get", new { id = nuevo.id }, nuevo);
         }
 
-        // PUT api/<SeleccionPartidosController>/5
+        // PUT api/<SeleccionPartidoController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<SeleccionPartidosController>/5
+        // DELETE api/<SeleccionPartidoController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
