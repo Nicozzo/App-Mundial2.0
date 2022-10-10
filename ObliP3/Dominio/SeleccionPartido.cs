@@ -7,20 +7,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 namespace LogicaNegocio.Dominio
 {
+    [Table("SeleccionPartido")]
     public class SeleccionPartido
     {
         [Key]
-        [Column(Order = 1)]
-        public int idSeleccion { get; set; }
+        public int id { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        public int idPartido { get; set; }
-
-        [ForeignKey("idSeleccion")]
+        [ForeignKey("idseleccion")]
         public Seleccion Seleccion { get; set; }
+        public int idseleccion { get; set; }
 
-        [ForeignKey("idPartido")]
-        public Partido Partido { get; set; }
+        [ForeignKey("idpartido")]
+        public Partido partido { get; set; }
+        public int idpartido { get; set; }
     }
 }

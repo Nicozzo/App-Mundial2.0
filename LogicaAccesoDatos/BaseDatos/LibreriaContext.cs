@@ -23,7 +23,8 @@ namespace LogicaAccesoDatos.BaseDatos
         public DbSet<Seleccion> Seleccion { get; set; }
 
         public DbSet<Grupo> grupo { get; set; }
-        
+        public DbSet<SeleccionPartido> SeleccionPartidos { get; set; }
+        public DbSet<ResultadoPartido> ResultadoPartidos { get; set; }
 
         public DbSet<Partido> Partido { get; set; }
      

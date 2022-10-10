@@ -32,8 +32,7 @@ namespace LogicaNegocio.Dominio
         public Grupo Grupo { get; set; }
         public int IdGrupo { get; set; }
 
-        public virtual ICollection<Partido> PartidosLocal { get; set; }
-        public virtual ICollection<Partido> PartidosVisitante { get; set; }
+
 
         public void Validar()
         {

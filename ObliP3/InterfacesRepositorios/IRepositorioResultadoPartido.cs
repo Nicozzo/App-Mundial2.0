@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LogicaNegocio.Dominio;
 
 namespace LogicaNegocio.InterfacesRepositorios
 {
-    interface IRepositorioFase
+    public interface IRepositorioResultadoPartido : IRepositorio<ResultadoPartido>
     {
+
     }
 }

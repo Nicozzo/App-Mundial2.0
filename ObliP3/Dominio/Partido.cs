@@ -15,15 +15,6 @@ namespace LogicaNegocio.Dominio
         [Key]
         public int ID { get; set; }
 
-        [ForeignKey("idSelccionLocal")]
-        public int idSelccionLocal { get; set; }
-
-        [ForeignKey("idSelccionVisitante")]
-        public int idSelccionVisitante { get; set; }
-
-        public virtual Seleccion SeleccionLocal { get; set; }
-        public virtual Seleccion SeleccionVisitante { get; set; }
-
         public DateTime date { get; set; }
 
 
