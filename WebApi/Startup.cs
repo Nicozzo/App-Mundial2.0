@@ -31,7 +31,7 @@ namespace WebApi
             services.AddControllers();
 
             services.AddScoped<IRepositorioSeleccion, RepositorioSeleccion>();
-            services.AddScoped<IRepositorioSeleccionPartidos, RepositorioSeleccionPartido>();
+   
             services.AddScoped<IRepositorioPartido, RepositorioPartido>();
 
 

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.EntityFrameworkCore;
 using LogicaNegocio.Dominio;
 
 namespace LogicaAccesoDatos.BaseDatos
@@ -26,7 +26,7 @@ namespace LogicaAccesoDatos.BaseDatos
         
 
         public DbSet<Partido> Partido { get; set; }
-        public DbSet<SeleccionPartidos> SeleccionPartidos { get; set; }
+     
 
 
 
@@ -55,7 +55,8 @@ namespace LogicaAccesoDatos.BaseDatos
 
             modelBuilder.Entity<Pais>().HasOne(pa => pa.Region).WithMany(Region => Region.Paises);
 
-            base.OnModelCreating(modelBuilder);
+       
+
         }
     }
 }

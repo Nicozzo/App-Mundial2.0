@@ -33,21 +33,60 @@ namespace LogicaAccesoDatos.BaseDatos
                 Partidos = Contexto.Partido
                    .ToList();
 
+                List<Seleccion> selecciones = new List<Seleccion>();
+                selecciones = Contexto.Seleccion
+                                .ToList();
+
+                Seleccion Localaux = null;
+
+                Seleccion Visitanteaux = null;
+                foreach (var item in selecciones)
+                {
+                    if (item.ID == obj.idSelccionLocal)
+                    {
+                        Localaux = item;
+                    }
+                    if (item.ID == obj.idSelccionVisitante)
+                    {
+                        Visitanteaux = item;
+                    }
+                }
+
+
+
                 if ((obj.date.Hour != 07) && (obj.date.Hour != 10) && (obj.date.Hour != 13) && (obj.date.Hour != 16))
                 {
                     throw new PaisException("La hora ingresada no es una de las 4 horas posibles");
                 }
 
-
-
                 if (obj.date < incial || obj.date > final)
                 {
                     throw new PaisException("La fecha no queda entre las dos fechas tope (20/ 11 /2022 y 2 / 12 / 2022)");
                 }
-
+                if (obj.idSelccionLocal == obj.idSelccionVisitante)
+                {
+                    throw new PaisException("La seleccion no puede jugar contra ella misma");
+                }
+                if (Localaux.Grupo != Visitanteaux.Grupo)
+                {
+                    throw new PaisException("Las selecciones no estan en el mismo grupo");
+                }
                 foreach (var item in Partidos)
                 {
 
+
+                    foreach (var item2 in Partidos)
+                    {
+                        if (item.ID == item2.ID)
+                        {
+                            if (item.idSelccionLocal == obj.idSelccionLocal && item.idSelccionVisitante == obj.idSelccionVisitante && item.idSelccionLocal == obj.idSelccionVisitante && item.idSelccionVisitante == obj.idSelccionLocal)
+                            {
+                                throw new PaisException("Las selecciones ya jugaron entre si");
+                            }
+                        }
+                    }
+
+                    
                     if (obj.date.Day == item.date.Day)
                     {
                         int cont = 0;
