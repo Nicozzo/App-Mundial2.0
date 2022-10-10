@@ -21,6 +21,5 @@ namespace LogicaNegocio.Dominio
         public Partido partido { get; set; }
         public int idpartido { get; set; }
 
-
     }
 }

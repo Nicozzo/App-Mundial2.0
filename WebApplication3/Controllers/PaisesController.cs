@@ -103,12 +103,14 @@ namespace WebApplication3.Controllers
             catch (PaisException e)
             {
                 ViewBag.Error = e.Message;
-                return View();
+                rm.Regiones = CUListaRegion.ObtenerListado();
+                return View(rm);
             }
             catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
-                return View();
+                rm.Regiones = CUListaRegion.ObtenerListado();
+                return View(rm);
             }
         }
 
@@ -173,13 +175,14 @@ namespace WebApplication3.Controllers
             }
         }
 
-
-        public ActionResult Delete(int Id)
+        public ActionResult Delete(int id)
         {
             if (HttpContext.Session.GetString("LogueadoEmail") != null)
             {
-                Pais aBorrar = CUBuscarxID.BuscarId(Id);
-                return View(aBorrar);
+                Pais aBorrar = CUBuscarxID.BuscarId(id);
+                CUBorrarPais.BorrarPais(aBorrar);
+                return RedirectToAction("Index", "Paises");
+                
             }
             else
             {
@@ -187,20 +190,5 @@ namespace WebApplication3.Controllers
             }
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Delete(Pais pa)
-        {
-            try
-            {
-                CUBorrarPais.BorrarPais(pa);
-                return RedirectToAction("Index", "Paises");
-            }
-            catch (Exception e) {
-                ViewBag.Error = "Ocurrió un error: " + e.Message;
-                return View();
-            }
-
-        }
     }
 }
