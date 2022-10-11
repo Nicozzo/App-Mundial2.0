@@ -65,13 +65,16 @@ namespace LogicaAccesoDatos.BaseDatos
         {
             try
             {
-                    obj.Validar();
-                    Contexto.Paises.Update(obj);
-                    Contexto.SaveChanges();
-            
+                obj.Validar();
+                Contexto.Paises.Update(obj);
+                Contexto.SaveChanges();
             }
-            catch (PaisException) {
-                throw;
+            catch (DbUpdateException ent) { 
+                throw new Exception (ent.Message);
+            }
+            catch (PaisException e)
+            {
+                throw e;
             }
             catch (Exception e)
             {

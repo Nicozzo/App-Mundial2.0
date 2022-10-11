@@ -20,9 +20,5 @@ namespace LogicaNegocio.Dominio
         [ForeignKey("idpartido")]
         public Partido partido { get; set; }
         public int idpartido { get; set; }
-<<<<<<< HEAD:ObliP3/Dominio/SeleccionPartidos.cs
-
-=======
->>>>>>> 4ef9c60519bed922045224548ab87289e5d491bb:ObliP3/Dominio/SeleccionPartido.cs
     }
 }
