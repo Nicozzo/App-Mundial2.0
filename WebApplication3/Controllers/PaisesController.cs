@@ -103,36 +103,44 @@ namespace WebApplication3.Controllers
             catch (PaisException e)
             {
                 ViewBag.Error = e.Message;
-                return View();
+                rm.Regiones = CUListaRegion.ObtenerListado();
+                return View(rm);
             }
             catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
-                return View();
+                rm.Regiones = CUListaRegion.ObtenerListado();
+                return View(rm);
             }
         }
 
-        // GET: PaisesController/Edit/5
+
+        [HttpGet]
         public ActionResult Edit(int id)
         {
             if (HttpContext.Session.GetString("LogueadoEmail") != null)
             {
                 Pais aEditar = CUBuscarxID.BuscarId(id);
-
+                RegionViewModel rm = new RegionViewModel();
+                rm.Pais = aEditar;
+                rm.Regiones = CUListaRegion.ObtenerListado();
                 try
                 {
                     if (aEditar == null)
                     {
                         ViewBag.Error = "El Pais no existe";
-                        return View();
+                        rm.Regiones = CUListaRegion.ObtenerListado();
+                        return View(rm);
                     }
 
-                    return View(aEditar);
+                    return View(rm);
                 }
                 catch (Exception ex)
                 {
                     ViewBag.Error = "Ocurrió un error: " + ex.Message;
-                    return View();
+
+                    rm.Regiones = CUListaRegion.ObtenerListado();
+                    return View(rm);
                 }
             }
             else
@@ -142,17 +150,38 @@ namespace WebApplication3.Controllers
            
         }
 
-        // POST: PaisesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Pais obj)
+        public ActionResult Edit(RegionViewModel rm)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    CUActualizarPais.Actualizar(obj);
-                    return RedirectToAction(nameof(Index));
+                    rm.Pais.IdRegion = rm.IdRegionSeleccionada;
+
+                    foreach (Region item in CUListaRegion.ObtenerListado())
+                    {
+                        if (item.IdRegion == rm.Pais.IdRegion)
+                        {
+                            rm.Pais.Region = item;
+                        }
+                    }
+
+                    if (rm.Imagen != null)
+                    {
+                        FileInfo fi = new FileInfo(rm.Imagen.FileName);
+
+                        string ext = fi.Extension;
+
+                        string nomArchivo = rm.Pais.Nombre + ext;
+
+                        rm.Pais.Imagen = nomArchivo;
+                    }
+
+                    CUActualizarPais.Actualizar(rm.Pais);
+
+                    return RedirectToAction("Index", "Paises");
                 }
                 else
                 {
@@ -160,26 +189,28 @@ namespace WebApplication3.Controllers
                     return View();
                 }
             }
-            catch (PaisException ex)
+            catch (PaisException e)
             {
-                ViewBag.Error = "Error: " + ex.Message;
-                return View();
+                ViewBag.Error = "Error: " + e.Message;
+                rm.Regiones = CUListaRegion.ObtenerListado();
+                return View(rm);
             }
             catch (Exception ex)
             {
                 ViewBag.Error = "Ocurrió un error";
-                 
-                return View();
+                rm.Regiones = CUListaRegion.ObtenerListado();
+                return View(rm);
             }
         }
 
-
-        public ActionResult Delete(int Id)
+        public ActionResult Delete(int id)
         {
             if (HttpContext.Session.GetString("LogueadoEmail") != null)
             {
-                Pais aBorrar = CUBuscarxID.BuscarId(Id);
-                return View(aBorrar);
+                Pais aBorrar = CUBuscarxID.BuscarId(id);
+                CUBorrarPais.BorrarPais(aBorrar);
+                return RedirectToAction("Index", "Paises");
+                
             }
             else
             {
@@ -187,20 +218,5 @@ namespace WebApplication3.Controllers
             }
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Delete(Pais pa)
-        {
-            try
-            {
-                CUBorrarPais.BorrarPais(pa);
-                return RedirectToAction("Index", "Paises");
-            }
-            catch (Exception e) {
-                ViewBag.Error = "Ocurrió un error: " + e.Message;
-                return View();
-            }
-
-        }
     }
 }
