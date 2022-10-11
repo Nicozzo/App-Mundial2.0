@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sMQSlWrhFUOvxnBhx1hs1h3m4PGg55COBVCfFnbkB8+Ukm+4rZ11ijqiw8LlF3JLYHgnD3ekSY04ILVvnbejlg==",
+  "dgSpecHash": "D0C78TJsxH99BCDUaohq4AXM1Kqhc7aMF3seeHCOHarroivPt+tcDjGtf4D6JjZW1gmhI3OEekfD8Pl8+OqGrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

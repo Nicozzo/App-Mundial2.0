@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {}
+    "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+    "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
         "projectName": "Excepciones",
-        "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+        "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\obj\\",
+        "outputPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",

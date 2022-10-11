@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using LogicaNegocio.Dominio;
 using LogicaNegocio.InterfacesRepositorios;
-using System.Linq;
 using Excepciones;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace LogicaAccesoDatos.BaseDatos
@@ -30,6 +30,8 @@ namespace LogicaAccesoDatos.BaseDatos
            
             try
             {
+
+
                 Partidos = Contexto.Partido
                    .ToList();
 
@@ -73,7 +75,34 @@ namespace LogicaAccesoDatos.BaseDatos
                     }
                 }
 
-                Contexto.Partido.Add(obj);
+                int aux = 0;
+                int contador = 0;
+                Partido nuevo = new Partido();
+                nuevo.date = obj.date;
+               
+                List<SeleccionPartido> pubAutors = new List<SeleccionPartido>();
+                foreach (var item in obj.PartidoSelecciones)
+                {
+                    if (aux == item.idseleccion)
+                    {
+                        throw new PaisException("No puede jugar la misma seleccion ");
+                    }
+                    aux = item.idseleccion;
+                    contador++;
+                    SeleccionPartido sp = new SeleccionPartido();
+                    sp.idseleccion = item.idseleccion;
+                    pubAutors.Add(sp);
+                    
+                }
+                
+
+                if (contador != 2)
+                {
+                    throw new PaisException("El partido necesita 2 seleciones");
+                }
+                nuevo.PartidoSelecciones = pubAutors;
+
+                Contexto.Partido.Add(nuevo);
                 Contexto.SaveChanges();
             }
             catch (PaisException)

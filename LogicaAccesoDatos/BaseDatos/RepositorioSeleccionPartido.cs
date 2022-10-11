@@ -24,6 +24,7 @@ namespace LogicaAccesoDatos.BaseDatos
 
         public void Add(SeleccionPartido obj)
         {
+            
             try
             {
                 SeleccionesPartido = Contexto.SeleccionPartidos
@@ -42,8 +43,6 @@ namespace LogicaAccesoDatos.BaseDatos
                         aux = item;
                     }
                 }
-
-              
 
                 foreach (var item in SeleccionesPartido)
                 {
@@ -98,8 +97,8 @@ namespace LogicaAccesoDatos.BaseDatos
         public IEnumerable<SeleccionPartido> FindAll()
         {
             return Contexto.SeleccionPartidos
-                     .Include(sp => sp.partido)
-                     .Include(sp => sp.Seleccion)
+                     //.Include(sp => sp.partido)
+                     //.Include(sp => sp.Seleccion)
                      .ToList();
         }
 
