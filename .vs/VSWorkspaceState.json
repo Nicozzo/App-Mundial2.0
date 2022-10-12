@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LogicaAccesoDatos",
+    "\\LogicaAccesoDatos\\BaseDatos"
   ],
-  "SelectedNode": "\\ObliP3.sln",
+  "SelectedNode": "\\LogicaAccesoDatos\\BaseDatos\\RepositorioIncidencia.cs",
   "PreviewInSolutionExplorer": false
 }
