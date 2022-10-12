@@ -13,9 +13,7 @@ namespace LogicaAccesoDatos.BaseDatos
 
        // public DbSet<Fase> Fases { get; set; }
 //        public DbSet<Grupo> Grupos { get; set; }
-
        public DbSet<Region> Regiones { get; set; }
-       // public DbSet<Rol> Roles { get; set; }
        public DbSet<User> Users { get; set; }
 
       //  public DbSet<Partido> Partidos { get; set; }

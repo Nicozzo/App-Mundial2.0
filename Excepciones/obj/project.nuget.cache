@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "eRex3Ueqo05EAgtxjYpsKejzsDtKrNNEC6Onh1tYGokZjVL26vKrC3IQWKivrnNLX6Kdv7DA/x5VaVD5uLE/SQ==",
+<<<<<<< HEAD
+  "dgSpecHash": "zwDpT7dakDN13wHfCvZn6HFFgwbxqqklMx+6Sp2HrQuyZb9gMOeU2BMO4UYlA+9t6hFqZQmkEUFibRy5Hx2OVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+  "projectFilePath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+=======
+  "dgSpecHash": "xOrfkuH3P9rm7arUKCqRT3L7pXR4dG8pD71q9h/Z0vLBPYvJEREedcYkSHQpP2W4fOsk5hq03wHn6Sn/0Jxdjg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+>>>>>>> 5b7d1aced763767fec332212459e69d62cbde667
   "expectedPackageFiles": [],
   "logs": []
 }

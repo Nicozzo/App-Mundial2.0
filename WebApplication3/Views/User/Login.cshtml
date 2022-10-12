@@ -19,10 +19,43 @@
                 <input asp-for="Password" id="txtPass" type="password" class="form-control" />
                 <span asp-validation-for="Password" id="avisoPass" class="text-danger"></span>
             </div>
+            <p style="color: darkred; padding: 5px">@ViewBag.msg</p>
             <div class="form-group">
                 <input type="submit" value="Login" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-<p>@ViewBag.msg</p>
+
+@section Scripts {
+
+    <script>
+        document.querySelector("#formLogin").addEventListener('submit', validarDatos);
+
+        function validarDatos(evento) {
+
+            evento.preventDefault();
+
+            let email = document.querySelector("#txtEmail").value;
+            let pass = document.querySelector("#txtPass").value;
+
+            let userValido = false;
+            let passValido = false;
+
+            if (email != "") { userValido = true; } else { document.querySelector("#avisoEmail").innerHTML = "El e-mail no puede ser vacío" }
+            if (pass != "") { passValido = true; } else { document.querySelector("#avisoPass").innerHTML = "La contraseña no puede ser vacío" }
+
+
+            if (userValido && passValido) {
+
+                this.submit();
+            }
+
+
+        }
+
+
+
+    </script>
+
+}

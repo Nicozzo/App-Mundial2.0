@@ -8,19 +8,40 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\diego\\.nuget\\packages\\": {}
+    "C:\\Users\\agust\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
       "projectName": "Excepciones",
       "projectPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
       "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\diego\\Source\\Repos\\App-Mundial2.0\\Excepciones\\obj\\",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+      "projectName": "Excepciones",
+      "projectPath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+      "packagesPath": "C:\\Users\\agust\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\Excepciones\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+      "projectName": "Excepciones",
+      "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\obj\\",
+>>>>>>> 5b7d1aced763767fec332212459e69d62cbde667
+>>>>>>> cfde0b5c486fba096e9c79cd3f9f8d3e0850b98d
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\agust\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

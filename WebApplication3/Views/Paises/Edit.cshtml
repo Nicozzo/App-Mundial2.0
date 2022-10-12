@@ -8,10 +8,10 @@
 <h1>Edit</h1>
 
 <h4>Pais</h4>
-<hr/>
+<hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <form asp-action="Edit" id="formEdit" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Pais.Id" class="control-label"></label>
@@ -25,24 +25,24 @@
             </div>
             <div class="form-group">
                 <label asp-for="Pais.CodigoIso" class="control-label"></label>
-                <input asp-for="Pais.CodigoIso" id="codigoISo" class="form-control" />
+                <input asp-for="Pais.CodigoIso" id="iso" class="form-control" />
                 <span asp-validation-for="Pais.CodigoIso" id="avisoCod" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Pais.Pbi" class="control-label"></label>
-                <input asp-for="Pais.Pbi" class="form-control" />
-                <span asp-validation-for="Pais.Pbi" class="text-danger"></span>
+                <input asp-for="Pais.Pbi"id="pbi" class="form-control" />
+                <span asp-validation-for="Pais.Pbi" id="avisoPbi" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Pais.Poblacion" class="control-label"></label>
-                <input asp-for="Pais.Poblacion" class="form-control" />
-                <span asp-validation-for="Pais.Poblacion" class="text-danger"></span>
+                <input asp-for="Pais.Poblacion" id="pob" class="form-control" />
+                <span asp-validation-for="Pais.Poblacion" id="avisoPob" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Imagen" class="control-label"></label>
-                <input asp-for="Imagen" class="form-control" />
-                <span asp-validation-for="Imagen" class="text-danger"></span>
+                <input asp-for="Imagen" id="img" class="form-control" />
+                <span asp-validation-for="Imagen" id="avisoImg" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <select id="Regiones" name="IdRegionSeleccionada">
@@ -55,7 +55,8 @@
                 <span id="Regiones" class="text-danger"></span>
 
             </div>
-            @ViewBag.Error
+
+            <p style="color: darkred; padding: 5px">@ViewBag.Error</p>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -69,4 +70,37 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        document.querySelector("#formEdit").addEventListener('submit', validarDatos);
+
+        function validarDatos(evento) {
+
+            evento.preventDefault();
+
+            let pbi = document.querySelector("#pbi").value;
+            let poblac = document.querySelector("#pob").value;
+            let img = document.querySelector("#img").value;
+
+            let pbiV = false;
+            let poblacV = false;
+            let imgV = false;
+
+            if (pbi != "" && pbi > 0) { pbiV = true; } else { document.querySelector("#avisoPbi").innerHTML = "Campo no puede estar vacìo" }
+            if (poblac != "" && poblac > 0) { poblacV = true; } else { document.querySelector("#avisoPob").innerHTML = "Campo no puede estar vacìo" }
+            if (img != "") { imgV = true; } else { document.querySelector("#avisoImg").innerHTML = "Campo no puede estar vacìo" }
+
+            if (pbiV && poblacV && imgV) {
+
+                this.submit();
+            }
+
+
+        }
+
+
+
+    </script>
 }
+
+

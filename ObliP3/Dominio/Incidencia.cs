@@ -14,8 +14,11 @@ namespace LogicaNegocio.Dominio
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int id { get; set; }
-        public IEnumerable<ResultadoPartido> resultados { get; set; } 
+        public IEnumerable<ResultadoPartido> resultados { get; set; }
 
+        [ForeignKey("idpartido")]
+        public Partido Partido { get; set; }
+        public int idpartido { get; set; }
         public string Resultado { get; set; }
     }
 }
