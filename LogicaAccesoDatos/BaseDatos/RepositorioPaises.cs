@@ -26,8 +26,8 @@ namespace LogicaAccesoDatos.BaseDatos
             try
             {
                 obj.Validar();
-
-                
+                obj.CodigoIso = obj.CodigoIso.ToUpper();
+                obj.Nombre = obj.Nombre.ToUpper();
                 Contexto.Paises.Add(obj);
                 Contexto.SaveChanges();
             }
@@ -55,8 +55,16 @@ namespace LogicaAccesoDatos.BaseDatos
 
         public void Remove(int id)
         {
+            List<Seleccion> selecciones = Contexto.Seleccion.ToList();
+
+            foreach (var selecc in selecciones)
+            {
+                if (selecc.IdPais == id){
+                    throw new PaisException("Este país tiene asignada una selección.");
+                }
+            }
                 Pais aBorrar = Contexto.Paises.Find(id);
-                if (aBorrar == null) throw new Exception("No existe dicho pais a borrar");
+                if (aBorrar == null) throw new PaisException("No existe dicho pais a borrar");
                 Contexto.Paises.Remove(aBorrar);
                 Contexto.SaveChanges();
         }
@@ -68,9 +76,6 @@ namespace LogicaAccesoDatos.BaseDatos
                 obj.Validar();
                 Contexto.Paises.Update(obj);
                 Contexto.SaveChanges();
-            }
-            catch (DbUpdateException ent) { 
-                throw new Exception (ent.Message);
             }
             catch (PaisException e)
             {
