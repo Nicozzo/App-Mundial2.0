@@ -31,7 +31,8 @@ namespace LogicaNegocio.Dominio
         [ForeignKey("IdGrupo")]
         public Grupo Grupo { get; set; }
         public int IdGrupo { get; set; }
-
+        public int PuntosGrupo { get; set; }
+        public IEnumerable<SeleccionPartido> seleccionPartidos { get; set; }
 
 
         public void Validar()

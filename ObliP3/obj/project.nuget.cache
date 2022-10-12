@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "fmsj5mGfMYgXuIKidk/X1VEJPLnEB5rXZAwbBTOHZ07W5fa76NyelTKizc39r89dKCpH5Al9xiC/YqsCYLzzig==",
+  "dgSpecHash": "CE1W8GNfFqcsQQzNwusC+LWvapiJoHFm1uemcTXhZej561xi0TQNEg6ygowNHyIg2sbkBnrLYpzDxv+IH6zmLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

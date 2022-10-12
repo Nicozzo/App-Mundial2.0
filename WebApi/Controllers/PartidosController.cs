@@ -28,6 +28,7 @@ namespace WebApi.Controllers
         {
             try
             {
+
                 return Ok(RepoPartido.FindAll());
             }
             catch

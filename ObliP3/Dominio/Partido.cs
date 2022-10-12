@@ -17,6 +17,7 @@ namespace LogicaNegocio.Dominio
 
         public DateTime date { get; set; }
 
+        public IEnumerable<SeleccionPartido> PartidoSelecciones { get; set; }
 
     }
 }

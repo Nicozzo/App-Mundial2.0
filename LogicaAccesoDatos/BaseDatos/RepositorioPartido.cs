@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using LogicaNegocio.Dominio;
 using LogicaNegocio.InterfacesRepositorios;
-using System.Linq;
 using Excepciones;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace LogicaAccesoDatos.BaseDatos
@@ -27,11 +27,16 @@ namespace LogicaAccesoDatos.BaseDatos
             DateTime incial = new DateTime(2022, 11, 20);
             DateTime final = new DateTime(2022, 12, 3);
             
+         List<Seleccion> Selecciones1 = new List<Seleccion>();
            
             try
             {
+
+
                 Partidos = Contexto.Partido
                    .ToList();
+
+                Selecciones1 = Contexto.Seleccion.ToList();
 
 
                 if ((obj.date.Hour != 07) && (obj.date.Hour != 10) && (obj.date.Hour != 13) && (obj.date.Hour != 16))
@@ -73,7 +78,68 @@ namespace LogicaAccesoDatos.BaseDatos
                     }
                 }
 
-                Contexto.Partido.Add(obj);
+                Seleccion aux = new Seleccion();
+                int aux1 = 0;
+                int contador = 0;
+                Partido nuevo = new Partido();
+                nuevo.date = obj.date;
+               
+                List<SeleccionPartido> selecciones = new List<SeleccionPartido>();
+                foreach (var item in obj.PartidoSelecciones)
+                {
+
+                   
+                    if (aux1 == item.idseleccion)
+                    {
+                        throw new PaisException("No puede jugar la misma seleccion ");
+                    }
+
+                    foreach (var sel in Selecciones1)
+                    {
+                        if (sel.ID == item.idseleccion)
+                        {
+                            aux = sel;
+                        }
+                        
+                    }
+
+                    //if (aux.Grup)
+                    //    {
+                    //    throw new PaisException("no estan en el mismo grupo");
+
+                    //}
+
+                    aux1 = item.idseleccion;
+                    contador++;
+                    SeleccionPartido sp = new SeleccionPartido();
+                    sp.idseleccion = item.idseleccion;
+                    sp.idpartido = item.id;
+                    selecciones.Add(sp);
+
+                    foreach (var item2 in Partidos)
+                    {
+                        foreach (var item3 in item2.PartidoSelecciones)
+                        {
+                            if (item3.Seleccion == item.Seleccion)
+                            {
+                                throw new PaisException("Ya jugaron");
+
+                            }
+                        }
+                    }
+
+                }
+
+
+                
+
+                if (contador != 2)
+                {
+                    throw new PaisException("El partido necesita 2 seleciones");
+                }
+                nuevo.PartidoSelecciones = selecciones;
+
+                Contexto.Partido.Add(nuevo);
                 Contexto.SaveChanges();
             }
             catch (PaisException)
@@ -89,12 +155,13 @@ namespace LogicaAccesoDatos.BaseDatos
         public IEnumerable<Partido> FindAll()
         {
             return Contexto.Partido
+
                    .ToList();
         }
 
         public Partido FindById(int id)
         {
-            throw new NotImplementedException();
+            return Contexto.Partido.Where(pa => pa.ID == id).SingleOrDefault();
         }
 
         public void Remove(int id)
