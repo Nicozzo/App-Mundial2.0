@@ -25,7 +25,7 @@ namespace LogicaAccesoDatos.BaseDatos
             try
             {
                 ResultadoPartido = Contexto.ResultadoPartidos
-                      .Include(rp => rp.seleccionPartido)
+                      //.Include(rp => rp.seleccionPartido)
                       .ToList();
 
                 foreach (var item in ResultadoPartido)
@@ -34,7 +34,11 @@ namespace LogicaAccesoDatos.BaseDatos
                     {
                         throw new PaisException("Ya ingresaron resultado de esa seleccion en ese partido");
                     }
+
                 }
+
+
+                 
 
                 Contexto.ResultadoPartidos.Add(obj);
                 Contexto.SaveChanges();
@@ -52,7 +56,7 @@ namespace LogicaAccesoDatos.BaseDatos
         public IEnumerable<ResultadoPartido> FindAll()
         {
             return Contexto.ResultadoPartidos
-                      .Include(rp => rp.seleccionPartido)
+                      //.Include(rp => rp.seleccionPartido)
                       .ToList();
         }
 
@@ -70,5 +74,7 @@ namespace LogicaAccesoDatos.BaseDatos
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }

@@ -17,7 +17,7 @@ namespace LogicaNegocio.Dominio
         public int id { get; set; }
         
         [ForeignKey("idseleccionPartido")]
-        public SeleccionPartido seleccionPartido { get; set; }
+        public SeleccionPartido SeleccionPartido { get; set; }
         public int idseleccionPartido { get; set; }
 
         public int goles{ get; set; }
