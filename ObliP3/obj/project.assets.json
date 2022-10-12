@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
       "projectName": "LogicaNegocio",
-      "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+      "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
       "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\obj\\",
+      "outputPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
-              "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
+            "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+              "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
             }
           }
         }
@@ -86,13 +86,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

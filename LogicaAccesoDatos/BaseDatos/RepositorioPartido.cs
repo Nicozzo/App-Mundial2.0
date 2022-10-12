@@ -26,8 +26,7 @@ namespace LogicaAccesoDatos.BaseDatos
         {
             DateTime incial = new DateTime(2022, 11, 20);
             DateTime final = new DateTime(2022, 12, 3);
-            
-         List<Seleccion> Selecciones1 = new List<Seleccion>();
+      
            
             try
             {
@@ -36,7 +35,7 @@ namespace LogicaAccesoDatos.BaseDatos
                 Partidos = Contexto.Partido
                    .ToList();
 
-                Selecciones1 = Contexto.Seleccion.ToList();
+               
 
 
                 if ((obj.date.Hour != 07) && (obj.date.Hour != 10) && (obj.date.Hour != 13) && (obj.date.Hour != 16))
@@ -78,12 +77,13 @@ namespace LogicaAccesoDatos.BaseDatos
                     }
                 }
 
-                Seleccion aux = new Seleccion();
+                
                 int aux1 = 0;
                 int contador = 0;
                 Partido nuevo = new Partido();
                 nuevo.date = obj.date;
                
+
                 List<SeleccionPartido> selecciones = new List<SeleccionPartido>();
                 foreach (var item in obj.PartidoSelecciones)
                 {
@@ -93,22 +93,6 @@ namespace LogicaAccesoDatos.BaseDatos
                     {
                         throw new PaisException("No puede jugar la misma seleccion ");
                     }
-
-                    foreach (var sel in Selecciones1)
-                    {
-                        if (sel.ID == item.idseleccion)
-                        {
-                            aux = sel;
-                        }
-                        
-                    }
-
-                    //if (aux.Grup)
-                    //    {
-                    //    throw new PaisException("no estan en el mismo grupo");
-
-                    //}
-
                     aux1 = item.idseleccion;
                     contador++;
                     SeleccionPartido sp = new SeleccionPartido();
@@ -116,22 +100,9 @@ namespace LogicaAccesoDatos.BaseDatos
                     sp.idpartido = item.id;
                     selecciones.Add(sp);
 
-                    foreach (var item2 in Partidos)
-                    {
-                        foreach (var item3 in item2.PartidoSelecciones)
-                        {
-                            if (item3.Seleccion == item.Seleccion)
-                            {
-                                throw new PaisException("Ya jugaron");
-
-                            }
-                        }
-                    }
-
                 }
 
 
-                
 
                 if (contador != 2)
                 {

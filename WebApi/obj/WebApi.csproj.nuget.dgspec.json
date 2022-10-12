@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+    "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
         "projectName": "Excepciones",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
+        "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\obj\\",
+        "outputPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
+    "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
         "projectName": "LogicaAccesoDatos",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
+        "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\obj\\",
+        "outputPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\LogicaAccesoDatos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,11 +82,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
+              "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+                "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
               },
-              "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
+              "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
               }
             }
           }
@@ -131,14 +131,14 @@
         }
       }
     },
-    "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+    "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
         "projectName": "LogicaNegocio",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
+        "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\obj\\",
+        "outputPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -155,8 +155,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
+              "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+                "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
               }
             }
           }
@@ -189,14 +189,14 @@
         }
       }
     },
-    "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -213,14 +213,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
+              "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj": {
+                "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\Excepciones\\Excepciones.csproj"
               },
-              "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj"
+              "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
+                "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj"
               },
-              "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
+              "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\ObliP3\\LogicaNegocio.csproj"
               }
             }
           }

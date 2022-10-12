@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D0C78TJsxH99BCDUaohq4AXM1Kqhc7aMF3seeHCOHarroivPt+tcDjGtf4D6JjZW1gmhI3OEekfD8Pl8+OqGrw==",
+  "dgSpecHash": "9RJXkxC/z7AlssOmoFds5e/bepQKt+zVD+dcIxCMRXh1/NYWtjh/EbMiEecTPXAh4xz4VmCnKMN80vEE919MNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
@@ -104,12 +104,5 @@
     "C:\\Users\\diego\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\WebApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

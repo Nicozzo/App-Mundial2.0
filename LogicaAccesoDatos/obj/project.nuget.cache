@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5x4b+i5QT+PwVPRpzlat2q/U/vhAMs67U9d7BDLwVAStpKi4bC4/PIBU2TVHfphzLVBqXHfGe/Xoya7X7r1H1A==",
+  "dgSpecHash": "pTObbsnaPr/i4+6m3b8FTTlUchsJHx5qqRzPPxAis1IUwFZAEBqUVyq13AF1WaDpUGkN1+lJNj9R9RQhJONNVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
+  "projectFilePath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
@@ -105,12 +105,5 @@
     "C:\\Users\\diego\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\diego\\source\\repos\\App-Mundial2.0\\LogicaAccesoDatos\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
