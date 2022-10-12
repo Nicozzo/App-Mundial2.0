@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "vig0SKZTYkjyudswwjdNcbrslWHessc36bEuXIvsLW/v74JEQUvyU47EaN0Nw59qvStyh6NNw/NXTLhLNmZFjw==",
   "success": true,
   "projectFilePath": "C:\\Users\\agust\\source\\repos\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
+=======
+  "dgSpecHash": "7nqgRMZHTBfT8x4hlAanTW5W7zqvH1pAksV0cTtx+oO9kaX83MRPUGI8RCZlLY96Q5MoURnRzLFTg1jnri8TpA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\diego\\Desktop\\App-Mundial2.0\\LogicaAplicacion\\LogicaAplicacion.csproj",
+>>>>>>> 5b7d1aced763767fec332212459e69d62cbde667
   "expectedPackageFiles": [],
   "logs": []
 }

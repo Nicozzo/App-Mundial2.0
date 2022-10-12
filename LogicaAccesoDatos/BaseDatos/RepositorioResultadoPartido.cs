@@ -28,14 +28,14 @@ namespace LogicaAccesoDatos.BaseDatos
                       //.Include(rp => rp.seleccionPartido)
                       .ToList();
 
-                foreach (var item in ResultadoPartido)
-                {
-                    if (item.idseleccionPartido == obj.idseleccionPartido)
-                    {
-                        throw new PaisException("Ya ingresaron resultado de esa seleccion en ese partido");
-                    }
+                //foreach (var item in ResultadoPartido)
+                //{
+                //    if (item.idseleccionPartido == obj.idseleccionPartido)
+                //    {
+                //        throw new PaisException("Ya ingresaron resultado de esa seleccion en ese partido");
+                //    }
 
-                }
+                //}
 
 
                  
