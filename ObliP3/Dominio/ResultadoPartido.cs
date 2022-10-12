@@ -13,7 +13,6 @@ namespace LogicaNegocio.Dominio
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-
         public int id { get; set; }
         
         [ForeignKey("idseleccionPartido")]

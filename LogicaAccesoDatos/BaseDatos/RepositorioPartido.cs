@@ -155,7 +155,7 @@ namespace LogicaAccesoDatos.BaseDatos
         public IEnumerable<Partido> FindAll()
         {
             return Contexto.Partido
-                    
+
                    .ToList();
         }
 

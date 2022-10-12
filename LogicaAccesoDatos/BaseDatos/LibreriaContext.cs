@@ -39,8 +39,10 @@ namespace LogicaAccesoDatos.BaseDatos
           //  DbSet<Grupo> Grupos;
            DbSet<Region> Regiones;
             DbSet<User> Users;
-           // DbSet<Partido> Partidos;
-          DbSet<Seleccion> Selecciones;
+
+            DbSet<Incidencia> incidencias;
+            // DbSet<Partido> Partidos;
+            DbSet<Seleccion> Selecciones;
 
         }
 
