@@ -165,6 +165,7 @@ namespace WebApplication3.Controllers
                         if (item.IdRegion == rm.Pais.IdRegion)
                         {
                             rm.Pais.Region = item;
+                            break;
                         }
                     }
 

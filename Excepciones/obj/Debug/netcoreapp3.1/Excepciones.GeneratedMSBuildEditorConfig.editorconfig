@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = Excepciones
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\diego\Desktop\App-Mundial2.0\Excepciones\
+=======
+build_property.ProjectDir = C:\Users\agust\source\repos\App-Mundial2.0\Excepciones\
+>>>>>>> 2c7b1373bd2b65658774eb9146ce33db963b0edb
